@@ -22,7 +22,7 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 ## 页面路由
-* 首页 -> index
+* 首页 -> home
 
 * 关于思安
 ** 公司简介 -> about-home
