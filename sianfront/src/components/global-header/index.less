@@ -1,4 +1,41 @@
 @import "~@/assets/style/base/_fn";
 
 .global-header{
+  //background:@primary;
+  //.height(80px);
+  min-height:80px;
+  background:@primary !important;
+
+  &.bg-info{
+  }
+
+  .navbar-collapse.collapse{
+      justify-content:flex-end;
+  }
+  .navbar-nav{
+    .nav-item{
+      margin-left:20px;
+      border-radius: @buttonRadius;
+      min-width:86px;
+      text-align: center;
+      transition:background 0.2s;
+
+      >a{
+        color:white;
+        padding: 3px 8px;
+
+      }
+      &:hover{
+        background:white;
+        a{
+          color:@primary;
+        }
+      }
+    }
+  }
+
+  .logo{
+    width:242px;
+    height:29px;
+  }
 }

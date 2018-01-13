@@ -1,6 +1,9 @@
 <template>
   <div class="common-page home">
-    <global-header></global-header>
+    <global-header ></global-header>
+
+    <h1>123</h1>
+    <h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1>
 
   </div>
 </template>
