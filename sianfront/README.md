@@ -19,3 +19,22 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+## 页面路由
+* 首页 -> index
+
+* 关于思安
+** 公司简介 -> about-home
+** 公司团队 -> about-team
+
+* 产品中心
+
+* 在线留言 -> contact
+
+* 资讯中心 -> news-list
+** 资讯详情 -> news-detail
+
+
+
+
