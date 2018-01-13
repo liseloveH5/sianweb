@@ -1,9 +1,11 @@
 <template>
   <div class="common-page home">
     <global-header ></global-header>
+    <div class="common-contain">
+      <h1>hello world</h1> <h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1>
+    </div>
 
-    <h1>123</h1>
-    <h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1><h1>hello world</h1>
+    <global-footer ></global-footer>
 
   </div>
 </template>

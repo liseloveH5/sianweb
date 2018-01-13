@@ -21,6 +21,7 @@ npm run build --report
 # 发布
 当所有都commit
 npm run deploy
+github访问站点： https://liseloveh5.github.io/sianweb/
 
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

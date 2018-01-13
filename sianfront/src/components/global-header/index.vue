@@ -2,8 +2,6 @@
   <b-navbar toggleable="md" type="dark" variant="primary" class="global-header" sticky>
 
     <div class="container">
-
-
       <b-navbar-brand  variant="faded" type="light">
         <img src="@/assets/images/global-header/logo.png" class="logo" alt="思安logo">
       </b-navbar-brand>
@@ -47,9 +45,6 @@
       </b-collapse>
 
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-
-
-
     </div>
 
 
