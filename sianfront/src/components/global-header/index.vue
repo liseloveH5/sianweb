@@ -1,8 +1,7 @@
 <template>
-  <div class="common-page home">
-    <global-header></global-header>
-
-  </div>
+  <header class="global-header">
+    我是头部
+  </header>
 </template>
 
 <script>
@@ -11,5 +10,5 @@
 </script>
 
 <style lang="less">
-  @import "index.less";
+  @import "./index.less";
 </style>

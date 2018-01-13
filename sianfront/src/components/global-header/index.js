@@ -1,7 +1,5 @@
-
-
 const index = {
-  name: 'demo',
+  name: 'global-header',
 
   data() {
     return {

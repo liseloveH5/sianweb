@@ -14,6 +14,12 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 // 引用自己的全局样式
 import '@/assets/style/index.less'
 
+// 引用自己全局组建 components
+import * as components from '@/components'
+for (let plugin in components) {
+  let currentPlugin = components[plugin];
+  Vue.component(currentPlugin.name, currentPlugin)
+}
 
 
 Vue.config.productionTip = false
