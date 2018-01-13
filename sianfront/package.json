@@ -1,8 +1,8 @@
 {
-  "name": "sianweb",
+  "name": "sian",
   "version": "1.0.0",
   "description": "a vue project",
-  "author": "dd",
+  "author": "duyuqing",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
