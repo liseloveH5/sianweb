@@ -36,5 +36,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ** 资讯详情 -> news-detail
 
 
+## UI库
+bootstrap-vue https://bootstrap-vue.js.org/
+
 
 

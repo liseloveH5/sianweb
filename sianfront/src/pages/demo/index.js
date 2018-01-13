@@ -3,6 +3,7 @@ const index = {
 
   data() {
     return {
+
     }
   },
 
@@ -19,6 +20,7 @@ const index = {
    },*/
 
   methods: {
+
   }
 
 };
