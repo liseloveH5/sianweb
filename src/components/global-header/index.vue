@@ -38,7 +38,7 @@
           <b-nav-item href="#">合作伙伴</b-nav-item>
           <b-nav-item-dropdown text="联系我们">
             <b-dropdown-item href="#">招贤纳士</b-dropdown-item>
-            <b-dropdown-item href="#">在线留言</b-dropdown-item>
+            <b-dropdown-item to="/contact/message">在线留言</b-dropdown-item>
             <b-dropdown-item href="#">智能地图</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
