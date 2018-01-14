@@ -11,7 +11,7 @@
     "deploy": "npm run build && push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0-beta.3",
+    "bootstrap": "4.0.0-beta.2",
     "bootstrap-vue": "^1.4.0",
     "jquery": "^3.2.1",
     "vue": "^2.5.2",
