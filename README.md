@@ -2,6 +2,9 @@
 
 > a vue project
 
+## 访问地址
+https://liseloveh5.github.io/sianweb
+
 ## Build Setup
 
 ``` bash

@@ -1,29 +1,97 @@
 <template>
   <div class="common-page contact-message">
-    <global-header ></global-header>
+    <global-header></global-header>
     <div class="common-contain">
-       <div class="container">
-         <b-form-group label="Radios using <code>options</code>">
-           <b-form-radio-group id="radios1" v-model="selected" :options="options" name="radioOpenions">
-           </b-form-radio-group>
-         </b-form-group>
+      <div class="container">
+        <b-form @submit="onSubmit" v-if="show" class="message-form">
 
-         <b-form-group label="Radios using sub-components">
-           <b-form-radio-group id="radios2" v-model="selected" name="radioSubComponent">
-             <b-form-radio value="first">Toggle this custom radio</b-form-radio>
-             <b-form-radio value="second">Or toggle this other custom radio</b-form-radio>
-             <b-form-radio value="third" disabled>This one is Disabled</b-form-radio>
-             <b-form-radio :value="{fourth: 4}">This is the 4th radio</b-form-radio>
-           </b-form-radio-group>
-         </b-form-group>
-       </div>
+          <b-form-row>
+            <b-col sm="2">
+              <label for="form-message" class="label-require">留言内容</label>
+            </b-col>
+            <b-col sm="6">
+              <b-form-textarea id="form-message"
+                               v-model="form.message"
+                               placeholder="请输入留言内容"
+                               :rows="3"
+                               required
+                               :max-rows="6">
+
+              </b-form-textarea>
+            </b-col>
+          </b-form-row>
+
+
+          <b-form-row>
+            <b-col sm="2">
+              <label for="form-name">姓名</label>
+            </b-col>
+            <b-col sm="4">
+              <b-form-input id="form-name"
+                            type="text"
+                            v-model="form.name"
+                            placeholder="请输入姓名">
+              </b-form-input>
+            </b-col>
+          </b-form-row>
+
+          <b-form-row>
+            <b-col sm="2">
+              <label for="form-phone">手机</label>
+            </b-col>
+            <b-col sm="4">
+              <b-form-input id="form-phone"
+                            type="text"
+                            v-model="form.phone"
+                            placeholder="请输入手机号码">
+              </b-form-input>
+            </b-col>
+          </b-form-row>
+
+          <b-form-row>
+            <b-col sm="2">
+              <label for="form-tel">电话</label>
+            </b-col>
+            <b-col sm="4">
+              <b-form-input id="form-tel"
+                            type="text"
+                            v-model="form.tel"
+                            placeholder="请输入电话号码">
+              </b-form-input>
+            </b-col>
+          </b-form-row>
+
+          <b-form-row>
+            <b-col sm="2">
+              <label for="form-email">邮箱</label>
+            </b-col>
+            <b-col sm="4">
+              <b-form-input id="form-email"
+                            type="text"
+                            v-model="form.email"
+                            placeholder="请输入邮箱">
+              </b-form-input>
+            </b-col>
+          </b-form-row>
+
+          <b-row class="form-button-row">
+            <b-col offset-sm="2" sm="4" class="">
+              <b-button type="submit" variant="primary">提交</b-button>
+            </b-col>
+
+          </b-row>
+
+
+        </b-form>
+      </div>
     </div>
-    <global-footer ></global-footer>
+    <global-footer></global-footer>
   </div>
 </template>
 
 <script>
   import index from './index.js'
+
   export default index
 </script>
 

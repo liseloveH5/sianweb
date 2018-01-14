@@ -32,4 +32,19 @@ html,body{
   }
 }
 
+// 覆盖全局bootstrap样式
+.btn{
+  min-width:120px;
+  text-align: center;
+  border-radius: @buttonRadius;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.btn-primary{
+  background-color:@primary;
+  border-color:@primary;
+}
+
 
