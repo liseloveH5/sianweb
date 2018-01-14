@@ -3,13 +3,18 @@ const index = {
 
   data() {
     return {
-      selected: 'first',
-      options: [
-        { text: 'Toggle this custom radio', value: 'first' },
-        { text: 'Or toggle this other custom radio', value: 'second' },
-        { text: 'This one is Disabled', value: 'third', disabled: true },
-        { text: 'This is the 4th radio', value: {fourth: 4} }
-      ]
+      form: {
+        email: '',
+        name: '',
+        food: null,
+        checked: []
+      },
+      foods: [
+        { text: 'Select One', value: null },
+        'Carrots', 'Beans', 'Tomatoes', 'Corn'
+      ],
+      show: true,
+      text: '',
     }
   },
 
