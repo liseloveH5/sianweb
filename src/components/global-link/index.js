@@ -1,5 +1,5 @@
 const index = {
-  name: 'global-footer',
+  name: 'global-link',
 
   data() {
     return {

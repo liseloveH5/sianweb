@@ -10,9 +10,11 @@ const index = {
         phone:'',
         tel:'',
       },
+
       show: true,
     }
   },
+
 
   // 挂载之后 相当于原来的ready
   mounted: function () {
