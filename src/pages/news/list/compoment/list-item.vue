@@ -9,7 +9,7 @@
         {{desc}}
       </p>
       <div>
-        <b-btn class="float-right" variant="primary">查看详情</b-btn>
+        <b-btn class="float-right" variant="primary" to="/news/detail">查看详情</b-btn>
       </div>
     </b-media>
   </b-card>
