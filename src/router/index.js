@@ -19,6 +19,10 @@ export default new Router({
       path: '/news/list',
       component: () => import(/* webpackChunkName: "contact" */ '@/pages/news/list/index.vue')
     },
+    {
+      path: '/news/detail',
+      component: () => import(/* webpackChunkName: "contact" */ '@/pages/news/detail/index.vue')
+    },
 
     {
       path: '/demo',
