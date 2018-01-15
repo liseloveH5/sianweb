@@ -10,13 +10,19 @@ export default new Router({
       component: () => import('@/pages/home/index.vue')
     },
 
-
     {
       path: '/contact/message',
       component: () => import(/* webpackChunkName: "contact" */ '@/pages/contact/message/index.vue')
     },
 
-
+    {
+      path: '/news/list',
+      component: () => import(/* webpackChunkName: "contact" */ '@/pages/news/list/index.vue')
+    },
+    {
+      path: '/news/detail',
+      component: () => import(/* webpackChunkName: "contact" */ '@/pages/news/detail/index.vue')
+    },
 
     {
       path: '/demo',

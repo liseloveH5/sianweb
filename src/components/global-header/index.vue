@@ -8,7 +8,8 @@
 
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
-          <b-nav-item href="#">首页</b-nav-item>
+          <b-nav-item to="/">首页</b-nav-item>
+
           <b-nav-item-dropdown text="关于思安">
             <b-dropdown-item href="#">公司简介</b-dropdown-item>
             <b-dropdown-item href="#">公司团队</b-dropdown-item>
@@ -29,9 +30,9 @@
           <b-nav-item href="#">客服中心</b-nav-item>
 
           <b-nav-item-dropdown text="资讯中心">
-            <b-dropdown-item href="#">公司资讯</b-dropdown-item>
-            <b-dropdown-item href="#">行业资讯</b-dropdown-item>
-            <b-dropdown-item href="#">政策法规</b-dropdown-item>
+            <b-dropdown-item to="/news/list">公司资讯</b-dropdown-item>
+            <b-dropdown-item to="/news/list">行业资讯</b-dropdown-item>
+            <b-dropdown-item to="/news/list">政策法规</b-dropdown-item>
           </b-nav-item-dropdown>
 
 
