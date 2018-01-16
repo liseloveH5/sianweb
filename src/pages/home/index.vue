@@ -1,5 +1,6 @@
 <template>
   <div class="common-page home">
+    1111111111111111
     <global-header ></global-header>
     <div class="common-contain">
       <!--part1:swiper首图-->
