@@ -17,18 +17,51 @@
   .pannel-wrap{
     width:1000px;
     margin:0 auto;
-    padding:10px 0;
+    padding:20px 0;
   }
   .pannel-title{
-    font-size: 26px;
-    line-height: 50px;
+    font-size: 32px;
+    line-height: 70px;
     p{
       text-align: center;
     }
   }
 
+  //part1
+  .swiper-wrap{
+    .carousel-caption{
+      width:100%;
+      text-align: left;
+      padding:0;
+      left:0;
+      top:40%;
+      .text-wrap{
+        width:1000px;
+        margin:0 auto;
+        text-shadow: none;
+        h3{
+          font-size:32px;
+        }
+        h2{
+          font-size:42px;
+        }
+        button{
+          margin-top:15px;
+          background:#fff;
+          color:#7d88a0;
+          border:0;
+          font-size:13px;
+          line-height:28px
+        }
+      }
+
+
+    }
+  }
+
   //part2
   .about-me-desc{
+    margin:10px 0 20px;
     p{
       text-align: center;
       line-height: 28px;
@@ -36,26 +69,110 @@
   }
   .about-me-list{
     .card{
-      margin:0.5rem;
+      margin:0.8rem;
       padding:0;
+      border:0;
       border-radius: 0;
       .card-img-top{
         height:200px;
         border-radius: 0;
       }
       .card-body{
+        position:relative;
+        margin-top:0.25rem;
+        padding:1.8rem 1.25rem;
         color:#FFF;
         background: #2A2A2A;
         .card-title{
+          font-size:19px;
           margin:0;
           line-height:25px;
         }
+        .card-letter{
+          .img{
+            position:absolute;
+            left:50%;
+            top:-23px;
+            margin-left:-20px;
+            width:40px;
+            height:46px;
+            line-height:46px;
+            color:#2A2A2A;
+            background: url('../../assets/images/main/shape.png') top left;
+            background-size:100% 100%;
+          }
+        }
+        p{
+          font-size:14px;
+        }
       }
     }
-    .card:first-child .card-body  {
-      background: #00aae8;
+    .card.active{
+      .card-body  {
+        background: #00aae8;
+        .card-letter h3{
+          color: #00aae8;
+        }
+      }
     }
 
+  }
+
+  //part3
+  .products{
+    .card{
+      border:0;
+      background: transparent;
+    }
+    .card-header{
+      background: transparent;
+      border:0;
+      .nav{
+        justify-content:center ;
+        .nav-link{
+          width:120px;
+          height:30px;
+          line-height:30px;
+          border-radius: 30px;
+          text-align: center;
+          padding:0;
+          margin:0 1rem;
+          background: #fff;
+          color:#7f889f;
+        }
+        .nav-link.active{
+          background-color:#4baae5;
+          color:#fff;
+        }
+      }
+    }
+
+    .tab-content{
+      margin-top:2rem;
+      background: #4baae5;
+    }
+
+  }
+
+  //part4
+  .service{
+    .row{
+      margin:0 2.5rem;
+    }
+    .card {
+      margin: 2.5rem;
+      .card-img-top{
+        margin:2rem auto 0;
+        height:10rem;
+        width:10rem;
+      }
+      .card-body{
+        padding-bottom: 3rem;
+        .card-title{
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 
 

@@ -20,24 +20,30 @@
 
 
             <b-carousel-slide img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180115/C4FC3jJGhd.jpg">
-              <div>为人类健康</div>
-              <div>提供技术和服务</div>
-              <p>Provide Technology and Services For Hunman Health</p>
-              <button>联系我们</button>
+              <div class="text-wrap">
+                <h3>为人类健康</h3>
+                <h2>提供技术和服务</h2>
+                <p>Provide Technology and Services For Hunman Health</p>
+                <b-button variant="secondary">联系我们</b-button>
+              </div>
             </b-carousel-slide>
 
             <b-carousel-slide img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180115/C4FC3jJGhd.jpg">
-              <div>为人类健康</div>
-              <div>提供技术和服务</div>
-              <p>Provide Technology and Services For Hunman Health</p>
-              <button>联系我们</button>
+              <div class="text-wrap">
+                <h3>为人类健康</h3>
+                <h2>提供技术和服务</h2>
+                <p>Provide Technology and Services For Hunman Health</p>
+                <b-button variant="secondary">联系我们</b-button>
+              </div>
             </b-carousel-slide>
 
             <b-carousel-slide img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180115/C4FC3jJGhd.jpg">
-              <div>为人类健康</div>
-              <div>提供技术和服务</div>
-              <p>Provide Technology and Services For Hunman Health</p>
-              <button>联系我们</button>
+              <div class="text-wrap">
+                <h3>为人类健康</h3>
+                <h2>提供技术和服务</h2>
+                <p>Provide Technology and Services For Hunman Health</p>
+                <b-button variant="secondary">联系我们</b-button>
+              </div>
             </b-carousel-slide>
 
 
@@ -47,7 +53,7 @@
       </div>
 
       <!--part2:关于思安-->
-      <div class="pannel about-me">
+      <div class="pannel about-me" style="background: #fff;">
         <div class="pannel-wrap">
           <div class="pannel-title"><p>关于思安</p></div>
           <div class="about-me-desc">
@@ -62,8 +68,8 @@
                     img-top
                     tag="article"
                     style="max-width: 20rem;"
-                    class="mb-2 col">
-              <div class="card-letter"></div>
+                    class="mb-2 col active">
+              <div class="card-letter"><h3 class="img text-center">H</h3></div>
               <p class="text-center">Company honors</p>
             </b-card>
             <b-card title="公司发展"
@@ -73,7 +79,7 @@
                     tag="article"
                     style="max-width: 20rem;"
                     class="mb-2 col">
-              <div class="card-letter"></div>
+              <div class="card-letter"><h3 class="img text-center">D</h3></div>
               <p class="text-center">Company development</p>
             </b-card>
             <b-card title="公司文化"
@@ -83,7 +89,7 @@
                     tag="article"
                     style="max-width: 20rem;"
                     class="mb-2 col">
-              <div class="card-letter"></div>
+              <div class="card-letter"><h3 class="img text-center">C</h3></div>
               <p class="text-center">Company culture</p>
             </b-card>
             <b-card title="公司团队"
@@ -93,7 +99,7 @@
                     tag="article"
                     style="max-width: 20rem;"
                     class="mb-2 col">
-              <div class="card-letter"></div>
+              <div class="card-letter"><h3 class="img text-center">T</h3></div>
               <p class="text-center">Company team</p>
             </b-card>
 
@@ -101,29 +107,28 @@
 
         </div>
       </div>
-      <div class="pannel">
-        <div class="pannel-wrap">
-          <div class="pannel-title"><p>产品中心</p></div>
-          <b-card no-body>
-            <b-tabs pills card>
-              <b-tab title="CAR-T系列" active>
+      <div class="pannel products">
+        <div class="pannel-title"><p>产品中心</p></div>
+        <b-card no-body>
+          <b-tabs pills card>
+            <b-tab title="CAR-T系列" active>
                 Tab Contents 1
-              </b-tab>
-              <b-tab title="TCR-T系列">
+            </b-tab>
+            <b-tab title="TCR-T系列">
                 Tab Contents 2
-              </b-tab>
-              <b-tab title="CAR-NK系列">
+            </b-tab>
+            <b-tab title="CAR-NK系列">
                 Tab Contents 3
-              </b-tab>
-              <b-tab title="其他产品">
+            </b-tab>
+            <b-tab title="其他产品">
                 Tab Contents 4
-              </b-tab>
-            </b-tabs>
-          </b-card>
-        </div>
-        </div>
+            </b-tab>
+          </b-tabs>
+        </b-card>
 
-      <div>
+      </div>
+
+      <div class="pannel service">
         <div class="pannel-wrap">
           <div class="pannel-title"><p>客服中心</p></div>
           <div class="card-list row">
