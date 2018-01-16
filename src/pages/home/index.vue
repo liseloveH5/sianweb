@@ -64,7 +64,7 @@
                     style="max-width: 20rem;"
                     class="mb-2 col">
               <div class="card-letter"></div>
-              <p>Company honors</p>
+              <p class="text-center">Company honors</p>
             </b-card>
             <b-card title="公司发展"
                     img-src="https://lorempixel.com/600/300/food/5/"
@@ -74,7 +74,7 @@
                     style="max-width: 20rem;"
                     class="mb-2 col">
               <div class="card-letter"></div>
-              <p>Company development</p>
+              <p class="text-center">Company development</p>
             </b-card>
             <b-card title="公司文化"
                     img-src="https://lorempixel.com/600/300/food/5/"
@@ -84,7 +84,7 @@
                     style="max-width: 20rem;"
                     class="mb-2 col">
               <div class="card-letter"></div>
-              <p>Company culture</p>
+              <p class="text-center">Company culture</p>
             </b-card>
             <b-card title="公司团队"
                     img-src="https://lorempixel.com/600/300/food/5/"
@@ -94,7 +94,7 @@
                     style="max-width: 20rem;"
                     class="mb-2 col">
               <div class="card-letter"></div>
-              <p>Company team</p>
+              <p class="text-center">Company team</p>
             </b-card>
 
           </div>
@@ -135,7 +135,7 @@
                     style="max-width: 20rem;"
                     class="mb-2 col">
               <div class="card-letter"></div>
-              <p>Service idea</p>
+              <p class="text-center">Service idea</p>
             </b-card>
             <b-card title="服务网络"
                     img-src="https://lorempixel.com/600/300/food/5/"
@@ -145,7 +145,7 @@
                     style="max-width: 20rem;"
                     class="mb-2 col">
               <div class="card-letter"></div>
-              <p>Service network</p>
+              <p class="text-center">Service network</p>
             </b-card>
             <b-card title="产品服务"
                     img-src="https://lorempixel.com/600/300/food/5/"
@@ -155,7 +155,7 @@
                     style="max-width: 20rem;"
                     class="mb-2 col">
               <div class="card-letter"></div>
-              <p>Product service</p>
+              <p class="text-center">Product service</p>
             </b-card>
           </div>
         </div>
