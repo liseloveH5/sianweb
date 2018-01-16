@@ -85,6 +85,8 @@
         </b-form>
       </div>
     </div>
+
+    <global-link></global-link>
     <global-footer></global-footer>
   </div>
 </template>

@@ -45,6 +45,8 @@
       <b-pagination-nav align="center" :number-of-pages="10" base-url="#" v-model="currentPage" />
 
     </div>
+
+    <global-link></global-link>
     <global-footer></global-footer>
 
   </div>

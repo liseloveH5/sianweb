@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="md" type="dark" variant="primary" class="global-header" sticky>
+  <b-navbar toggleable="md" type="dark" variant="primary" class="global-header flex-column" sticky >
 
     <div class="container">
       <b-navbar-brand  variant="faded" type="light">
@@ -47,6 +47,13 @@
 
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
     </div>
+
+    <b-nav class="second-header" v-show="showSecondMenu">
+      <b-nav-item>招贤纳士</b-nav-item>
+      <b-nav-item>在线留言</b-nav-item>
+      <b-nav-item>只能地图</b-nav-item>
+    </b-nav>
+
 
 
   </b-navbar>
