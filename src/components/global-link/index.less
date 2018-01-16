@@ -1,6 +1,28 @@
 @import "~@/assets/style/base/_fn";
 
 .global-link{
+  background:white;
+  .nav{
+    padding-top:30px;
+    justify-content: center;
+    padding-bottom:15px;
+    border-bottom:1px solid @colorBorder;
+
+    a{
+      color:#81899e;
+      transition: all 0.5s;
+      &:hover{
+        color:darken(#81899e,20%)
+      }
+    }
+
+  }
+
+  .comp-info{
+    padding-top:20px;
+    padding-bottom:30px;
+    color:#81899e;
+  }
 
   //.copy-right{
   //  background:@primary;
