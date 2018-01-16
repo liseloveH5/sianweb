@@ -3,7 +3,7 @@
 .global-header{
   //background:@primary;
   //.height(80px);
-  min-height:80px;
+  //min-height:80px;
   background:@primary !important;
 
   &.bg-info{
@@ -38,4 +38,17 @@
     width:242px;
     height:29px;
   }
+
+  .second-header{
+    @navHeight:60px;
+    position: absolute;
+    background:white;
+    bottom:-@navHeight;
+    left:0;
+    height:@navHeight;
+    width:100%;
+    justify-content: center;
+  }
+
+
 }
