@@ -107,7 +107,7 @@
 
         </div>
       </div>
-      <div class="pannel products">
+      <div class="pannel products tab-uniform">
         <div class="pannel-title"><p>产品中心</p></div>
         <b-card no-body>
           <b-tabs pills card>
@@ -139,7 +139,6 @@
                     tag="article"
                     style="max-width: 20rem;"
                     class="mb-2 col">
-              <div class="card-letter"></div>
               <p class="text-center">Service idea</p>
             </b-card>
             <b-card title="服务网络"
@@ -149,7 +148,6 @@
                     tag="article"
                     style="max-width: 20rem;"
                     class="mb-2 col">
-              <div class="card-letter"></div>
               <p class="text-center">Service network</p>
             </b-card>
             <b-card title="产品服务"
@@ -159,14 +157,13 @@
                     tag="article"
                     style="max-width: 20rem;"
                     class="mb-2 col">
-              <div class="card-letter"></div>
               <p class="text-center">Product service</p>
             </b-card>
           </div>
         </div>
       </div>
 
-      <div class="pannel">
+      <div class="pannel news tab-uniform">
         <div class="pannel-wrap">
           <div class="pannel-title"><p>资讯中心</p></div>
           <b-card no-body>
@@ -182,7 +179,7 @@
                         </div>
                         <div class="text-wrap col">
                           <h5>华北制药集团</h5>
-                          <p>########################</p>
+                          <p>9月14日，为期三天的2017第四飒沓vhjeeasjhsdjhdshdshmdsskcn凯撒活动开始届诺贝尔奖获得者医学峰会在贵阳国际生态会议中心隆重开幕。五位诺奖得主、十余位中美院士、2000余位权威专家以及国内外生物医药产业新锐领袖、资深投资机构齐聚“林城”贵阳，围绕“科学：事实与虚构的博弈（Science-Fact...</p>
                         </div>
                       </div>
                       <div class="news-item col row">
@@ -209,11 +206,11 @@
                         </div>
                       </div>
                       <div class="news-item col row">
-                        <div class="text-wrap">
+                        <div class="text-wrap col">
                           <h5>华北制药集团</h5>
                           <p>########################</p>
                         </div>
-                        <div class="img-wrap">
+                        <div class="img-wrap col">
                           <img/>
                           <span class="arrow"></span>
                         </div>
@@ -235,7 +232,7 @@
       </div>
 
 
-      <div class="pannel connect-us">
+      <div class="pannel member">
         <div class="pannel-wrap">
           <div class="pannel-title"><p>合作伙伴</p></div>
           <p class="text-center">我们期待与您的真诚合作，共创美好前景。为人类健康提供技术和服务。</p>
@@ -251,6 +248,18 @@
         </div>
 
       </div>
+    </div>
+
+    <div class="pannel co-info">
+      <div class="co-qr-code"><img></div>
+      <p class="text-center co-name">武汉思安医疗技术有限公司</p>
+      <div class="row">
+        <span class="col">电话：（027）81785853</span>
+        <span class="col">传真：（027）81785903</span>
+        <span class="col">网址：www.11111.com</span>
+        <span class="col">邮编：430207</span>
+      </div>
+      <p class="text-center co-addr">地址：湖北省武汉市东湖高新区高新大道818号医疗器械园B9栋D区3楼</p>
     </div>
 
     <global-footer ></global-footer>
