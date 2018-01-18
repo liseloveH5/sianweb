@@ -76,7 +76,7 @@
 
           <b-row class="form-button-row">
             <b-col offset-sm="2" sm="4" class="">
-              <b-button type="submit" variant="primary">提交</b-button>
+              <b-button type="submit" >提交</b-button>
             </b-col>
 
           </b-row>
@@ -85,6 +85,8 @@
         </b-form>
       </div>
     </div>
+
+    <global-link></global-link>
     <global-footer></global-footer>
   </div>
 </template>

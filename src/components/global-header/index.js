@@ -7,6 +7,15 @@ const index = {
     }
   },
 
+  props:{
+    showSecondMenu: {
+      type: Boolean,
+      default: false
+    },
+  },
+
+
+
   // 挂载之后 相当于原来的ready
   mounted: function () {
     this.$nextTick(function () {
