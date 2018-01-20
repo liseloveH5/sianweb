@@ -110,6 +110,7 @@
       <div class="pannel products tab-uniform">
         <div class="pannel-title"><p>产品中心</p></div>
         <b-card no-body>
+          <span class="icon-arrow"></span>
           <b-tabs pills card>
             <b-tab title="CAR-T系列" active>
                 Tab Contents 1

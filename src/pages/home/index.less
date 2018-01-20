@@ -40,17 +40,20 @@
         margin:0 auto;
         text-shadow: none;
         h3{
-          font-size:32px;
+          font-size:2.5rem;
         }
         h2{
-          font-size:42px;
+          font-size:3.5rem;
+          line-height:5rem;
+        }
+        p{
+          font-size:1.25rem;
         }
         button{
-          margin-top:15px;
+          margin-top:25px;
           background:#fff;
           color:#7d88a0;
           border:0;
-          font-size:13px;
           line-height:28px
         }
       }
@@ -153,6 +156,19 @@
     .tab-content{
       margin-top:2rem;
       background: #4baae5;
+    }
+    .icon-arrow{
+      position:absolute;
+      left:50%;
+      margin-left:-14px;
+      margin-top:46px;
+      content: ' ';
+      width:0;
+      height:0;
+      border-left:20px solid transparent;
+      border-top:20px solid transparent;
+      border-right:20px solid transparent;
+      border-bottom:20px solid @primary;
     }
   }
 
