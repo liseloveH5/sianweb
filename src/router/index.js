@@ -28,6 +28,14 @@ export default new Router({
       component: () => import(/* webpackChunkName: "contact" */ '@/pages/news/detail/index.vue')
     },
 
+
+    {
+      path: '/science/application',
+      component: () => import(/* webpackChunkName: "contact" */ '@/pages/science/application/index.vue')
+    },
+
+
+
     {
       path: '/demo',
       component: () => import(/* webpackChunkName: "demo" */ '@/pages/demo/index.vue')

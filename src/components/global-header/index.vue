@@ -37,10 +37,10 @@
 
           <b-nav-item-dropdown text="科技创新">
             <span></span>
-            <b-dropdown-item href="#">研发体系</b-dropdown-item>
-            <b-dropdown-item href="#">科研动态</b-dropdown-item>
-            <b-dropdown-item href="#">科技奖项</b-dropdown-item>
-            <b-dropdown-item href="#">合作伙伴</b-dropdown-item>
+            <b-dropdown-item to="/science/application">研发体系</b-dropdown-item>
+            <b-dropdown-item to="/science/application">科研动态</b-dropdown-item>
+            <b-dropdown-item to="/science/application">科技奖项</b-dropdown-item>
+            <b-dropdown-item to="/science/application">合作伙伴</b-dropdown-item>
           </b-nav-item-dropdown>
 
           <b-nav-item-dropdown text="联系我们">
