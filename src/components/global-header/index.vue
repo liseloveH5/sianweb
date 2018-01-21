@@ -10,41 +10,44 @@
         <b-navbar-nav>
           <b-nav-item to="/">首页</b-nav-item>
 
-          <b-nav-item-dropdown text="关于思安">
+          <b-nav-item-dropdown text="走进思安">
             <span></span>
-            <b-dropdown-item href="#">公司简介</b-dropdown-item>
-            <b-dropdown-item to="/introduce/member">公司团队</b-dropdown-item>
-            <b-dropdown-item href="#">公司文化</b-dropdown-item>
-            <b-dropdown-item href="#">公司目标</b-dropdown-item>
-            <b-dropdown-item href="#">公司使命</b-dropdown-item>
-            <b-dropdown-item href="#">公司发展</b-dropdown-item>
-            <b-dropdown-item href="#">公司荣耀</b-dropdown-item>
+            <b-dropdown-item to="/introduce/member">企业概况</b-dropdown-item>
+            <b-dropdown-item to="/introduce/member">领导致辞</b-dropdown-item>
+            <b-dropdown-item to="/introduce/member">发展历程</b-dropdown-item>
+            <b-dropdown-item to="/introduce/member">企业文化</b-dropdown-item>
           </b-nav-item-dropdown>
+
+          <b-nav-item-dropdown text="新闻中心">
+            <span></span>
+            <b-dropdown-item to="/news/list">最新咨询</b-dropdown-item>
+            <b-dropdown-item to="/news/list">公司资讯</b-dropdown-item>
+            <b-dropdown-item to="/news/list">行业资讯</b-dropdown-item>
+            <b-dropdown-item to="/news/list">公司声明</b-dropdown-item>
+          </b-nav-item-dropdown>
+
 
           <b-nav-item-dropdown text="产品中心">
             <span></span>
             <b-dropdown-item href="#">CAR-T系列</b-dropdown-item>
             <b-dropdown-item href="#">TCR-T系列</b-dropdown-item>
             <b-dropdown-item href="#">CAR-NK系列</b-dropdown-item>
-            <b-dropdown-item href="#">其他系列</b-dropdown-item>
+            <b-dropdown-item href="#">更多产品</b-dropdown-item>
           </b-nav-item-dropdown>
 
-          <b-nav-item href="#">客服中心</b-nav-item>
-
-          <b-nav-item-dropdown text="资讯中心">
+          <b-nav-item-dropdown text="科技创新">
             <span></span>
-            <b-dropdown-item to="/news/list">公司资讯</b-dropdown-item>
-            <b-dropdown-item href="#">行业资讯</b-dropdown-item>
-            <b-dropdown-item href="#">政策法规</b-dropdown-item>
+            <b-dropdown-item href="#">研发体系</b-dropdown-item>
+            <b-dropdown-item href="#">研究动态</b-dropdown-item>
+            <b-dropdown-item href="#">科技奖项</b-dropdown-item>
+            <b-dropdown-item href="#">合作伙伴</b-dropdown-item>
           </b-nav-item-dropdown>
 
-
-          <b-nav-item href="#">合作伙伴</b-nav-item>
-          <b-nav-item-dropdown text="联系我们">
+          <b-nav-item-dropdown text="销售网络">
             <span></span>
             <b-dropdown-item href="#">招贤纳士</b-dropdown-item>
             <b-dropdown-item to="/contact/message">在线留言</b-dropdown-item>
-            <b-dropdown-item href="#">智能地图</b-dropdown-item>
+            <b-dropdown-item href="#">公司地址</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
