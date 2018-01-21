@@ -25,9 +25,8 @@ const index = {
 
   methods: {
     initData(){
-
-      this.$http.get('http://47.96.153.197/Sian/backend/getIndexPics').then(function (response) {
-        console.log(response);
+      // 发送请求
+      this.$http.post('/Sian/backend/getIndexPics').then(function (response) {
       })
       .catch(function (error) {
         console.log(error);

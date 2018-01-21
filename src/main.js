@@ -13,6 +13,17 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 // 引用第三方ajax插件
 import axios from 'axios'
 Vue.prototype.$http = axios
+axios.defaults.baseURL = 'http://47.96.153.197';
+
+
+// axios 全局拦截器
+axios.interceptors.response.use(function (response) {
+  // Do something with response data
+  return response.data;
+}, function (error) {
+  // Do something with response error
+  return Promise.reject(error);
+});
 
 
 // 引用自己的全局样式
