@@ -10,9 +10,14 @@ Vue.use(BootstrapVue);
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+// 引用第三方ajax插件
+import axios from 'axios'
+Vue.prototype.$http = axios
+
 
 // 引用自己的全局样式
 import '@/assets/style/index.less'
+
 
 // 引用自己全局组建 components
 import * as components from '@/components'
