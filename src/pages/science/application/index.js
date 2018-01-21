@@ -46,7 +46,12 @@ const index = {
   methods: {
     onOrganSubmit (evt) {
       evt.preventDefault();
-      alert(JSON.stringify(this.organForm));
+      let obj = {
+        title: 'Alert Title',
+        message: 'Alert Message',
+        type: 'success'
+      }
+      // alert(JSON.stringify(this.organForm));
     },
 
     onPersonSubmit (evt) {
