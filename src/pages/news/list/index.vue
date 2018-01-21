@@ -4,7 +4,7 @@
     <div class="common-contain container">
 
 
-      <b-row c>
+      <b-row >
         <b-col cols="3">
 
           <b-list-group class="sticky-top">
