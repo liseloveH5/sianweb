@@ -63,7 +63,7 @@
           </div>
           <div class="about-me-list row">
             <b-card title="公司荣誉"
-                    img-src="https://lorempixel.com/600/300/food/5/"
+                    img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180121/FcH7J2ChA5.png"
                     img-alt="Image"
                     img-top
                     tag="article"
@@ -73,7 +73,7 @@
               <p class="text-center">Company honors</p>
             </b-card>
             <b-card title="公司发展"
-                    img-src="https://lorempixel.com/600/300/food/5/"
+                    img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180121/I1EDeKBmEB.png"
                     img-alt="Image"
                     img-top
                     tag="article"
@@ -83,7 +83,7 @@
               <p class="text-center">Company development</p>
             </b-card>
             <b-card title="公司文化"
-                    img-src="https://lorempixel.com/600/300/food/5/"
+                    img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180121/51d1f5gElH.png"
                     img-alt="Image"
                     img-top
                     tag="article"
@@ -93,7 +93,7 @@
               <p class="text-center">Company culture</p>
             </b-card>
             <b-card title="公司团队"
-                    img-src="https://lorempixel.com/600/300/food/5/"
+                    img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180121/2cbFl02EDi.png"
                     img-alt="Image"
                     img-top
                     tag="article"
