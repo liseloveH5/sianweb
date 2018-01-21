@@ -68,7 +68,8 @@
                     img-top
                     tag="article"
                     style="max-width: 20rem;"
-                    class="mb-2 col active">
+                    :class="id == 1 ? 'mb-2 col active' : 'mb-2 col '"
+                    @click="id = 1">
               <div class="card-letter"><h3 class="img text-center">H</h3></div>
               <p class="text-center">Company honors</p>
             </b-card>
@@ -78,7 +79,8 @@
                     img-top
                     tag="article"
                     style="max-width: 20rem;"
-                    class="mb-2 col">
+                    :class="id == 2 ? 'mb-2 col active' : 'mb-2 col '"
+                    @click="id = 2">
               <div class="card-letter"><h3 class="img text-center">D</h3></div>
               <p class="text-center">Company development</p>
             </b-card>
@@ -88,7 +90,8 @@
                     img-top
                     tag="article"
                     style="max-width: 20rem;"
-                    class="mb-2 col">
+                    :class="id == 3 ? 'mb-2 col active' : 'mb-2 col '"
+                    @click="id = 3">
               <div class="card-letter"><h3 class="img text-center">C</h3></div>
               <p class="text-center">Company culture</p>
             </b-card>
@@ -98,7 +101,8 @@
                     img-top
                     tag="article"
                     style="max-width: 20rem;"
-                    class="mb-2 col">
+                    :class="id == 4 ? 'mb-2 col active' : 'mb-2 col '"
+                    @click="id = 4">
               <div class="card-letter"><h3 class="img text-center">T</h3></div>
               <p class="text-center">Company team</p>
             </b-card>

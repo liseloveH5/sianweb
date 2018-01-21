@@ -6,7 +6,8 @@ const index = {
   data() {
     return {
       slide: 0,
-      sliding: null
+      sliding: null,
+      id: 1
     }
   },
 
