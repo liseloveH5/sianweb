@@ -13,14 +13,14 @@
           <b-nav-item-dropdown text="走进思安">
             <span></span>
             <b-dropdown-item to="/introduce/member">企业概况</b-dropdown-item>
-            <b-dropdown-item to="/introduce/member">领导致辞</b-dropdown-item>
+            <b-dropdown-item to="/introduce/member">领导寄语</b-dropdown-item>
             <b-dropdown-item to="/introduce/member">发展历程</b-dropdown-item>
             <b-dropdown-item to="/introduce/member">企业文化</b-dropdown-item>
           </b-nav-item-dropdown>
 
           <b-nav-item-dropdown text="新闻中心">
             <span></span>
-            <b-dropdown-item to="/news/list">最新咨询</b-dropdown-item>
+            <b-dropdown-item to="/news/list">最新资讯</b-dropdown-item>
             <b-dropdown-item to="/news/list">公司资讯</b-dropdown-item>
             <b-dropdown-item to="/news/list">行业资讯</b-dropdown-item>
             <b-dropdown-item to="/news/list">公司声明</b-dropdown-item>

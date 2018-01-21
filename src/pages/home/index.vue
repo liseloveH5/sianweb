@@ -54,7 +54,7 @@
 
       <!--part2:关于思安-->
       <div class="pannel about-me" style="background: #fff;">
-        <div class="pannel-wrap">
+        <div class="container">
           <div class="pannel-title"><p>关于思安</p></div>
           <div class="about-me-desc">
             <p>武汉思安医疗技术有限公司成立于2015年，是一家致力于生物医药产品研发、临床应用的高新技术企业，公司由多位在美国肿瘤研究领域</p>
@@ -130,7 +130,7 @@
       </div>
 
       <div class="pannel service">
-        <div class="pannel-wrap">
+        <div class="container">
           <div class="pannel-title"><p>客服中心</p></div>
           <div class="card-list row">
             <b-card title="服务理念"
@@ -165,7 +165,7 @@
       </div>
 
       <div class="pannel news tab-uniform">
-        <div class="pannel-wrap">
+        <div class="container">
           <div class="pannel-title"><p>资讯中心</p></div>
           <b-card no-body>
             <b-tabs pills card>
@@ -234,7 +234,7 @@
 
 
       <div class="pannel friends">
-        <div class="pannel-wrap">
+        <div class="container">
           <div class="pannel-title"><p>合作伙伴</p></div>
           <p class="text-center">我们期待与您的真诚合作，共创美好前景。为人类健康提供技术和服务。</p>
           <div class="pic-wrap row">
