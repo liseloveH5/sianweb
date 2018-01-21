@@ -134,7 +134,7 @@
           <div class="pannel-title"><p>客服中心</p></div>
           <div class="card-list row">
             <b-card title="服务理念"
-                    img-src="https://lorempixel.com/600/300/food/5/"
+                    img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180121/kI2eAE92mf.png"
                     img-alt="Image"
                     img-top
                     tag="article"
@@ -143,7 +143,7 @@
               <p class="text-center">Service idea</p>
             </b-card>
             <b-card title="服务网络"
-                    img-src="https://lorempixel.com/600/300/food/5/"
+                    img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180121/h4em3DGBjC.png"
                     img-alt="Image"
                     img-top
                     tag="article"
@@ -152,7 +152,7 @@
               <p class="text-center">Service network</p>
             </b-card>
             <b-card title="产品服务"
-                    img-src="https://lorempixel.com/600/300/food/5/"
+                    img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180121/lFigCbehbE.png"
                     img-alt="Image"
                     img-top
                     tag="article"
@@ -238,12 +238,24 @@
           <div class="pannel-title"><p>合作伙伴</p></div>
           <p class="text-center">我们期待与您的真诚合作，共创美好前景。为人类健康提供技术和服务。</p>
           <div class="pic-wrap row">
-            <img class="col"/>
-            <img class="col"/>
-            <img class="col"/>
-            <img class="col"/>
-            <img class="col"/>
-            <img class="col"/>
+            <div class="col"><img src="@/assets/images/main/co-logo1.jpg"/></div>
+            <div class="col"><img src="@/assets/images/main/co-logo2.jpg"/></div>
+            <div class="col"><img src="@/assets/images/main/co-logo3.jpg"/></div>
+            <div class="col"><img src="@/assets/images/main/co-logo4.jpg"/></div>
+            <div class="col"><img src="@/assets/images/main/co-logo5.jpg"/></div>
+          </div>
+          <div class="pic-wrap row">
+            <div class="col"><img src="@/assets/images/main/co-logo6.jpg"/></div>
+            <div class="col"><img src="@/assets/images/main/co-logo7.jpg"/></div>
+            <div class="col"><img src="@/assets/images/main/co-logo8.jpg"/></div>
+            <div class="col"><img src="@/assets/images/main/co-logo9.jpg"/></div>
+            <div class="col"><img src="@/assets/images/main/co-logo10.jpg"/></div>
+          </div>
+          <div class="pic-wrap row">
+            <div class="col"><img src="@/assets/images/main/co-logo11.jpg"/></div>
+            <div class="col"><img src="@/assets/images/main/co-logo12.jpg"/></div>
+            <div class="col"><img src="@/assets/images/main/co-logo13.jpg"/></div>
+            <div class="col"><img src="@/assets/images/main/co-logo14.jpg"/></div>
           </div>
 
         </div>
