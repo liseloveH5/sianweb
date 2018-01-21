@@ -235,8 +235,17 @@
       .news-item{
         height:14.5rem;
       }
+      .news-item:hover{
+        opacity: 0.8;
+      }
       .img-wrap{
         background: #ccc;
+        width:100%;
+        height:14.5rem;
+        overflow: hidden;
+        img{
+          width:100%;
+        }
       }
       .text-wrap{
         padding:20px 0;
@@ -251,6 +260,33 @@
           height:160px;
           line-height:20px;
           overflow: hidden;
+        }
+        .arrow-left:before{
+          position: absolute;
+          left:-16px;
+          margin-top:6rem;
+          content: '';
+          width:0px;
+          height:0px;
+          border-top:8px solid transparent;
+          border-left:8px solid transparent;
+          border-bottom:8px solid transparent;
+          border-right:8px solid #fff;
+
+        }
+        .arrow-right:before{
+          position: absolute;
+          z-index:5;
+          left:15rem;
+          margin-top:6rem;
+          content: '';
+          width:0px;
+          height:0px;
+          border-top:8px solid transparent;
+          border-right:8px solid transparent;
+          border-bottom:8px solid transparent;
+          border-left:8px solid #fff;
+
         }
       }
     }

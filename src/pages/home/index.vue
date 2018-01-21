@@ -175,20 +175,20 @@
                     <div class="row">
                       <div class="news-item col row">
                         <div class="img-wrap col">
-                          <img/>
-                          <span class="arrow"></span>
+                          <img src="http://oyqbjwu6v.bkt.clouddn.com/blog/180115/fGidhf2AjF.png"/>
                         </div>
                         <div class="text-wrap col">
+                          <span class="arrow-left"></span>
                           <h5>华北制药集团</h5>
                           <p>9月14日，为期三天的2017第四飒沓vhjeeasjhsdjhdshdshmdsskcn凯撒活动开始届诺贝尔奖获得者医学峰会在贵阳国际生态会议中心隆重开幕。五位诺奖得主、十余位中美院士、2000余位权威专家以及国内外生物医药产业新锐领袖、资深投资机构齐聚“林城”贵阳，围绕“科学：事实与虚构的博弈（Science-Fact...</p>
                         </div>
                       </div>
                       <div class="news-item col row">
                         <div class="img-wrap col">
-                          <img/>
-                          <span class="arrow"></span>
+                          <img src="http://oyqbjwu6v.bkt.clouddn.com/blog/180115/Jf7KJdfAAG.png"/>
                         </div>
                         <div class="text-wrap col">
+                          <span class="arrow-left"></span>
                           <h5>华北制药集团</h5>
                           <p>########################</p>
                         </div>
@@ -198,22 +198,22 @@
                     <div class="row">
                       <div class="news-item col row">
                         <div class="text-wrap col">
+                          <span class="arrow-right"></span>
                           <h5>华北制药集团</h5>
                           <p>########################</p>
                         </div>
                         <div class="img-wrap col">
-                          <img/>
-                          <span class="arrow"></span>
+                          <img src="http://oyqbjwu6v.bkt.clouddn.com/blog/180115/I6B4ljL8Ai.png"/>
                         </div>
                       </div>
                       <div class="news-item col row">
                         <div class="text-wrap col">
+                          <span class="arrow-right"></span>
                           <h5>华北制药集团</h5>
                           <p>########################</p>
                         </div>
                         <div class="img-wrap col">
-                          <img/>
-                          <span class="arrow"></span>
+                          <img src="http://oyqbjwu6v.bkt.clouddn.com/blog/180115/0i1mJHi7JJ.png"/>
                         </div>
                       </div>
                     </div>
