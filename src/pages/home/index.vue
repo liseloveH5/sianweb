@@ -264,7 +264,7 @@
     </div>
 
     <div class="pannel co-info">
-      <div class="co-qr-code"><img></div>
+      <div class="co-qr-code"><img src="@/assets/images/main/qr-code.png"></div>
       <p class="text-center co-name">武汉思安医疗技术有限公司</p>
       <div class="row">
         <span class="col">电话：（027）81785853</span>
