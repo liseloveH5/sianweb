@@ -49,5 +49,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 bootstrap-vue https://bootstrap-vue.js.org/
 bootstrap:v-4  http://getbootstrap.com/
 
+## alert
+vue2-simplert-plugin https://github.com/mazipan/vue2-simplert
+
 
 
