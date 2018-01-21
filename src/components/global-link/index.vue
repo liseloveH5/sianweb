@@ -4,11 +4,10 @@
 
       <b-nav class="justify-content-center nav">
         <b-nav-item to="/">首页</b-nav-item>
-        <b-nav-item>关于思安</b-nav-item>
-        <b-nav-item to="/">产品中心</b-nav-item>
-        <b-nav-item>客服中心</b-nav-item>
-        <b-nav-item to="/news/list">资讯中心</b-nav-item>
-        <b-nav-item>合作伙伴</b-nav-item>
+        <b-nav-item>走进思安</b-nav-item>
+        <b-nav-item to="/news/list">新闻中心</b-nav-item>
+        <b-nav-item>产品中心</b-nav-item>
+        <b-nav-item>科技创新</b-nav-item>
         <b-nav-item to="/contact/message">联系我们</b-nav-item>
       </b-nav>
 
