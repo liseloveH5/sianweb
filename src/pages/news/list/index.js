@@ -14,6 +14,7 @@ const index = {
   mounted: function () {
     this.$nextTick(function () {
       // 保证 this.$el 已经插入文档
+      this.initData();
     })
   },
 
@@ -23,6 +24,15 @@ const index = {
    },*/
 
   methods: {
+    initData(){
+      // 发送请求
+      this.$http.post('/Sian/backend/getIndexPics').then(function (response) {
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+    }
 
   }
 
