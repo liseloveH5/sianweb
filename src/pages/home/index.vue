@@ -252,10 +252,11 @@
             <div class="col"><img src="@/assets/images/main/co-logo10.jpg"/></div>
           </div>
           <div class="pic-wrap row">
-            <div class="col"><img src="@/assets/images/main/co-logo11.jpg"/></div>
+            <div class="col" ><img src="@/assets/images/main/co-logo11.jpg"/></div>
             <div class="col"><img src="@/assets/images/main/co-logo12.jpg"/></div>
             <div class="col"><img src="@/assets/images/main/co-logo13.jpg"/></div>
             <div class="col"><img src="@/assets/images/main/co-logo14.jpg"/></div>
+            <div class="col"></div>
           </div>
 
         </div>
