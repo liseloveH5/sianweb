@@ -6,7 +6,8 @@ const index = {
   data() {
     return {
       slide: 0,
-      sliding: null
+      sliding: null,
+      aboutClick:1,
     }
   },
 
@@ -28,7 +29,11 @@ const index = {
     },
     onSlideEnd (slide) {
       this.sliding = false
+    },
+    changeAboutClick(index){
+      this.aboutClick = index;
     }
+
   }
 
 };
