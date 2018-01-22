@@ -24,7 +24,7 @@
                 <h3>为人类健康</h3>
                 <h2>提供技术和服务</h2>
                 <p>Provide Technology and Services For Hunman Health</p>
-                <b-button variant="secondary" to="/contact/message">联系我们</b-button>
+                <b-button variant="secondary" to="/contact/application">申请入口</b-button>
               </div>
             </b-carousel-slide>
 
@@ -33,7 +33,7 @@
                 <h3>为人类健康</h3>
                 <h2>提供技术和服务</h2>
                 <p>Provide Technology and Services For Hunman Health</p>
-                <b-button variant="secondary" to="/contact/message">联系我们</b-button>
+                <b-button variant="secondary" to="/contact/application">联系我们</b-button>
               </div>
             </b-carousel-slide>
 
@@ -42,7 +42,7 @@
                 <h3>为人类健康</h3>
                 <h2>提供技术和服务</h2>
                 <p>Provide Technology and Services For Hunman Health</p>
-                <b-button variant="secondary" to="/contact/message">联系我们</b-button>
+                <b-button variant="secondary" to="/contact/application">联系我们</b-button>
               </div>
             </b-carousel-slide>
 

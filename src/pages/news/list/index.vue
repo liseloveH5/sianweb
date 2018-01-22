@@ -1,9 +1,8 @@
 <template>
   <div class="common-page news-list">
     <global-header></global-header>
+    <div class="img-wrap"><img src="@/assets/images/main/friends-bg.png" /></div>
     <div class="common-contain container">
-
-
       <b-row >
         <b-col cols="3">
 
@@ -16,14 +15,15 @@
         </b-col>
 
         <b-col cols="9">
-          <nav aria-label="breadcrumb">
+          <b-breadcrumb :items="items"/>
+         <!-- <nav aria-label="breadcrumb">
 
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="#">首页</a></li>
               <li class="breadcrumb-item">资讯中心</li>
               <li class="breadcrumb-item active" >公司简讯</li>
             </ol>
-          </nav>
+          </nav>-->
 
           <div class="list-container">
             <div>
