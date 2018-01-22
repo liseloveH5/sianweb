@@ -1,20 +1,25 @@
-import ListItem from "./compoment/list-item.vue";
-
 const index = {
-  name: 'news-list',
-  components: {ListItem},
+  name: 'contact-message',
 
   data() {
     return {
-      currentPage: 1,
+      form: {
+        email: '',
+        name: '',
+        message:'',
+        phone:'',
+        tel:'',
+      },
+
+      show: true,
     }
   },
+
 
   // 挂载之后 相当于原来的ready
   mounted: function () {
     this.$nextTick(function () {
       // 保证 this.$el 已经插入文档
-      this.initData();
     })
   },
 
@@ -24,14 +29,9 @@ const index = {
    },*/
 
   methods: {
-    initData(){
-      // 发送请求
-      this.$http.post('/Sian/backend/getIndexPics').then(function (response) {
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-
+    onSubmit (evt) {
+      evt.preventDefault();
+      alert(JSON.stringify(this.form));
     }
 
   }
