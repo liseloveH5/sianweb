@@ -12,10 +12,10 @@
 
           <b-nav-item-dropdown text="走进思安">
             <span></span>
-            <b-dropdown-item to="/introduce/member">企业概况</b-dropdown-item>
-            <b-dropdown-item to="/introduce/member">领导寄语</b-dropdown-item>
-            <b-dropdown-item to="/introduce/member">发展历程</b-dropdown-item>
-            <b-dropdown-item to="/introduce/member">企业文化</b-dropdown-item>
+            <b-dropdown-item to="/common">企业概况</b-dropdown-item>
+            <b-dropdown-item to="/common">领导寄语</b-dropdown-item>
+            <b-dropdown-item to="/common">发展历程</b-dropdown-item>
+            <b-dropdown-item to="/common">企业文化</b-dropdown-item>
           </b-nav-item-dropdown>
 
           <b-nav-item-dropdown text="新闻中心">
@@ -23,36 +23,38 @@
             <b-dropdown-item to="/news/list">最新资讯</b-dropdown-item>
             <b-dropdown-item to="/news/list">公司资讯</b-dropdown-item>
             <b-dropdown-item to="/news/list">行业资讯</b-dropdown-item>
-            <b-dropdown-item to="/news/list">公司申明</b-dropdown-item>
+            <b-dropdown-item to="/common">公司申明</b-dropdown-item>
           </b-nav-item-dropdown>
 
 
           <b-nav-item-dropdown text="产品中心">
             <span></span>
-            <b-dropdown-item href="#">CAR-T系列</b-dropdown-item>
-            <b-dropdown-item href="#">TCR-T系列</b-dropdown-item>
-            <b-dropdown-item href="#">CAR-NK系列</b-dropdown-item>
-            <b-dropdown-item href="#">更多产品</b-dropdown-item>
+            <b-dropdown-item to="/common">CAR-T系列</b-dropdown-item>
+            <b-dropdown-item to="/common">TCR-T系列</b-dropdown-item>
+            <b-dropdown-item to="/common">CAR-NK系列</b-dropdown-item>
+            <b-dropdown-item to="/common">更多产品</b-dropdown-item>
           </b-nav-item-dropdown>
 
           <b-nav-item-dropdown text="科技创新">
             <span></span>
-            <b-dropdown-item to="/science/application">研发体系</b-dropdown-item>
-            <b-dropdown-item to="/science/application">科研动态</b-dropdown-item>
-            <b-dropdown-item to="/science/application">科技奖项</b-dropdown-item>
-            <b-dropdown-item to="/science/application">合作伙伴</b-dropdown-item>
+            <b-dropdown-item to="/common">研发体系</b-dropdown-item>
+            <b-dropdown-item to="/common">科研动态</b-dropdown-item>
+            <b-dropdown-item to="/common">科技奖项</b-dropdown-item>
+            <b-dropdown-item to="/common">合作伙伴</b-dropdown-item>
           </b-nav-item-dropdown>
 
           <b-nav-item-dropdown text="联系我们">
             <span></span>
-            <b-dropdown-item href="#">销售网络</b-dropdown-item>
-            <b-dropdown-item href="#">招纳贤士</b-dropdown-item>
-            <b-dropdown-item to="/contact/message">在线留言</b-dropdown-item>
-            <b-dropdown-item href="#">智能地图</b-dropdown-item>
+            <b-dropdown-item to="/common">销售网络</b-dropdown-item>
+            <b-dropdown-item to="/common">招纳贤士</b-dropdown-item>
+            <b-dropdown-item to="/contact/application">科研申请</b-dropdown-item>
+            <b-dropdown-item to="/common">智能地图</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
     </div>
+
+    <b-button variant="outline-secondary" size='sm' style="position:absolute; right:25px;margin-top:18px; border-radius: 5px; min-width: 70px; padding:.2rem 0;">English</b-button>
 
 
 

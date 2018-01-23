@@ -7,6 +7,13 @@ const index = {
   data() {
     return {
       currentPage: 1,
+      items: [{
+        text: '首页',
+        href: '#'
+      }, {
+        text: '最新资讯',
+        active: true
+      }]
     }
   },
 
