@@ -3,14 +3,6 @@ const index = {
 
   data() {
     return {
-      form: {
-        email: '',
-        name: '',
-        message:'',
-        phone:'',
-        tel:'',
-      },
-
       show: true,
     }
   },
