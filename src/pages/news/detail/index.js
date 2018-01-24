@@ -11,6 +11,7 @@ const index = {
   mounted: function () {
     this.$nextTick(function () {
       // 保证 this.$el 已经插入文档
+      this.getData()
     })
   },
 
@@ -20,6 +21,9 @@ const index = {
    },*/
 
   methods: {
+    getData() {
+
+    }
 
   }
 

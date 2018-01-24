@@ -26,7 +26,11 @@ const index = {
   methods: {
     initData(){
       // 发送请求
-      this.$http.post('/Sian/backend/getIndexPics').then(function (response) {
+      var obj = {
+        id: 17
+      }
+      this.$http.post('/News/news', obj).then(function (response) {
+        alert(11)
       })
       .catch(function (error) {
         console.log(error);
