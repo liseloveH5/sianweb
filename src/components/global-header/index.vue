@@ -6,6 +6,8 @@
         <img src="@/assets/images/global-header/logo.png" class="logo" alt="思安logo">
       </b-navbar-brand>
 
+
+
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
           <b-nav-item to="/">首页</b-nav-item>
@@ -49,6 +51,7 @@
             <b-dropdown-item to="/common">招纳贤士</b-dropdown-item>
             <b-dropdown-item to="/contact/application">科研申请</b-dropdown-item>
             <b-dropdown-item to="/common">智能地图</b-dropdown-item>
+            <b-dropdown-item to="/common">{{header}}</b-dropdown-item>
           </b-nav-item-dropdown>
         </b-navbar-nav>
       </b-collapse>
