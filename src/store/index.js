@@ -7,7 +7,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    header: [1,2,3,4,5]
+    header: []
   },
   actions,
   modules: {
