@@ -33,12 +33,13 @@ const index = {
         alert(11)
       })
       .catch(function (error) {
-        console.log(error);
+        util.reqFail(error)
       });
 
     }
 
-  }
+  },
+
 
 };
 
