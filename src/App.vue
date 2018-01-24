@@ -6,7 +6,19 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  mounted() {
+    //　全局初始化
+    this.init();
+  },
+  methods: {
+    init(){
+      // 申明全局变量
+
+    }
+  }
+
+
 }
 </script>
 

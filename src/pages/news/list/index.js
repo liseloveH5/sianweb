@@ -26,10 +26,11 @@ const index = {
   methods: {
     initData(){
       // 发送请求
-      this.$http.post('/Sian/backend/getIndexPics').then(function (response) {
+      this.$http.post('/System/nav').then(function (response) {
+        console.log(response);
       })
       .catch(function (error) {
-        console.log(error);
+        util.reqFail(error)
       });
 
     }
