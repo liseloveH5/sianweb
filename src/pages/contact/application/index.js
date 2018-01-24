@@ -3,6 +3,8 @@ const index = {
 
   data() {
     return {
+      count:0,
+      info:'',
       organForm: {
         name: '',
         contactName:'',
@@ -44,19 +46,40 @@ const index = {
    },*/
 
   methods: {
+    countDownChanged (count) {
+      this.count = count
+    },
     onOrganSubmit (evt) {
       evt.preventDefault();
-      let obj = {
-        title: 'Alert Title',
-        message: 'Alert Message',
-        type: 'success'
+      // 表单验证
+      if (!this.organForm.name || !this.organForm.contactName || !this.organForm.contactPhone) {
+        this.count=3;
+        this.info='带*的字段不能为空';
       }
-      // alert(JSON.stringify(this.organForm));
+      var r1 = /^1[3|4|5|7|8][0-9]{9}$/;
+      var r2=/^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
+      if (!r1.test(this.organForm.contactPhone) && !r2.test(this.organForm.contactPhone)) {
+        this.count=3;
+        this.info='请输入正确的手机号码';
+      }
+
+
+
     },
 
     onPersonSubmit (evt) {
       evt.preventDefault();
-      alert(JSON.stringify(this.personForm));
+      // 表单验证
+      if (!this.personForm.name || !this.personForm.phone || !this.personForm.location) {
+        this.count=3;
+        this.info='带*的字段不能为空';
+      }
+      var r1 = /^1[3|4|5|7|8][0-9]{9}$/;
+      var r2=/^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
+      if (!r1.test(this.personForm.phone) && !r2.test(this.personForm.phone)) {
+        this.count=3;
+        this.info='请输入正确的手机号码';
+      }
     }
 
   }

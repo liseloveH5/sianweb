@@ -3,6 +3,11 @@
     <global-header></global-header>
     <div class="img-wrap"><img src="@/assets/images/main/friends-bg.png" /></div>
     <div class="common-contain container">
+      <b-alert :show="count"
+               @dismissed="count=0"
+               @dismiss-count-down="countDownChanged"
+               variant="warning">{{info}}
+      </b-alert>
       <b-row >
         <b-col cols="3">
 
