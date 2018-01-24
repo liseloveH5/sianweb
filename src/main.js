@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+// 引用vuex
+import store from '@/store'
+
 // 引用第三方UI框架
 import BootstrapVue from 'bootstrap-vue'
 Vue.use(BootstrapVue);
@@ -53,6 +56,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
