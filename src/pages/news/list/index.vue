@@ -15,15 +15,6 @@
         </b-col>
 
         <b-col cols="9">
-          <b-breadcrumb :items="items"/>
-         <!-- <nav aria-label="breadcrumb">
-
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">首页</a></li>
-              <li class="breadcrumb-item">资讯中心</li>
-              <li class="breadcrumb-item active" >公司简讯</li>
-            </ol>
-          </nav>-->
 
           <div class="list-container">
             <div>
