@@ -26,12 +26,12 @@ const index = {
   methods: {
     initData(){
       // 发送请求
-      this.$http.post('/System/nav').then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        util.reqFail(error)
-      });
+      // this.$http.post('/System/nav').then(function (response) {
+      //   console.log(response);
+      // })
+      // .catch(function (error) {
+      //   util.reqFail(error)
+      // });
 
     }
 
