@@ -12,14 +12,6 @@ export function hrefFormat(value){
 }
 
 
-// px -> rem
-export function px2rem(value){
-  if(value){
-    return (value/20).toFixed(2) + 'rem'
-  }else{
-    return '0';
-  }
-}
 
 
 // 添加数据格式化显示的filter， 默认为2
