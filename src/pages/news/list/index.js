@@ -6,6 +6,7 @@ const index = {
 
   data() {
     return {
+      list:[],
       currentPage: 1,
     }
   },
@@ -14,7 +15,7 @@ const index = {
   mounted: function () {
     this.$nextTick(function () {
       // 保证 this.$el 已经插入文档
-      this.initData();
+      this.getListData();
     })
   },
 
@@ -24,17 +25,23 @@ const index = {
    },*/
 
   methods: {
-    initData(){
+    getListData() {
+      let _this = this
       // 发送请求
       var obj = {
-        id: 17
+        params: {
+          id: 17,
+          key: '',
+          page: 1,
+          size: 8,
+        }
       }
-      this.$http.post('/News/news', obj).then(function (response) {
-        alert(11)
+      this.$http.get('/News/newslist', obj).then(function (res) {
+        _this.list = res
       })
-      .catch(function (error) {
-        util.reqFail(error)
-      });
+        .catch(function (error) {
+          util.reqFail(error)
+        });
 
     }
 

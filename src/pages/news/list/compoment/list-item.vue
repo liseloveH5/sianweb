@@ -9,7 +9,7 @@
         {{desc}}
       </p>
       <div>
-        <b-btn class="float-right" variant="primary" to="/news/detail">查看详情</b-btn>
+        <b-btn class="float-right" variant="primary" :to="{path:'/news/detail/',query: {id: id}}"> 查看详情</b-btn>
       </div>
     </b-media>
   </b-card>
@@ -28,6 +28,7 @@
       title:String,
       date:String,
       desc:String,
+      id:String
     },
     // 挂载之后 相当于原来的ready
     mounted: function () {
