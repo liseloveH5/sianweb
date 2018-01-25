@@ -7,6 +7,15 @@ import router from './router'
 // 引用vuex
 import store from '@/store'
 
+// 引用过滤器
+import * as filters from '@/services/filter'
+// register global utility filters.
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
+
+
+
 // 引用第三方UI框架
 import BootstrapVue from 'bootstrap-vue'
 Vue.use(BootstrapVue);
