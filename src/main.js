@@ -7,6 +7,15 @@ import router from './router'
 // 引用vuex
 import store from '@/store'
 
+// 引用过滤器
+import * as filters from '@/services/filter'
+// register global utility filters.
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
+
+
+
 // 引用第三方UI框架
 import BootstrapVue from 'bootstrap-vue'
 Vue.use(BootstrapVue);
@@ -15,11 +24,24 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 // 引用第三方ajax插件
 import axios from 'axios'
+import qs from 'qs';
 Vue.prototype.$http = axios
 axios.defaults.baseURL = 'http://api.sianmed.com/web';
 
-
 // axios 全局拦截器
+// 降级取消option请求
+axios.interceptors.request.use(function (config) {
+  config.headers['Content-Type'] = 'application/x-www-form-urlencoded'
+  if(config.method === 'post') {
+    config.data = qs.stringify( {
+      ...config.data
+    })
+  }
+  return config;
+}, function (error) {
+  return Promise.reject(error);
+})
+
 axios.interceptors.response.use(function (response) {
   // Do something with response data
   if(response.data.code && response.data.code == '000'){
@@ -31,6 +53,7 @@ axios.interceptors.response.use(function (response) {
   // Do something with response error
   return Promise.reject(error);
 });
+
 
 // 引用自己的全局样式
 import '@/assets/style/index.less'
