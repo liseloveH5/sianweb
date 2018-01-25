@@ -27,7 +27,7 @@ const index = {
         id: this.$route.params.id
       }
       this.$http.post('/News/info', obj).then(function (response) {
-        // alert(11)
+        alert(11)
       })
         .catch(function (error) {
           // alert(222)

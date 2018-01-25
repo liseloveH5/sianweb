@@ -9,7 +9,7 @@
         {{desc}}
       </p>
       <div>
-        <b-btn class="float-right" variant="primary" :to="{path:'/news/detail/',query: {id: id}}"> 查看详情</b-btn>
+        <b-btn class="float-right" variant="primary" :to="{path:`/news/detail/${id}`}"> 查看详情</b-btn>
       </div>
     </b-media>
   </b-card>
