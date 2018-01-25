@@ -4,7 +4,7 @@
       <b-img slot="aside" :src="image" width="200" height="160" alt="placeholder" />
 
       <h5 class="mt-0 title">{{title}}</h5>
-      <span class="data-time">{{date}}</span>
+      <span class="data-time">{{date | dateFormat}}</span>
       <p class="desc">
         {{desc}}
       </p>

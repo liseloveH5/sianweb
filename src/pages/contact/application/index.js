@@ -5,25 +5,22 @@ const index = {
     return {
       count:0,
       info:'',
+      tip:'',
       organForm: {
         name: '',
         contactName:'',
         contactPhone:'',
         applyProject:'',
-        selected: 'car-t',
-        options: [
-          { value: '', text: '' }
-        ]
+        selected: '1',
+        options: []
       },
 
       personForm: {
         name: '',
         phone:'',
         location:'',
-        selected: 'car-t',
-        options: [
-          { value: '', text: '' }
-        ]
+        selected: '1',
+        options: []
       },
     }
   },
@@ -80,9 +77,11 @@ const index = {
       let r2=/^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
       if (!r1.test(this.organForm.contactPhone) && !r2.test(this.organForm.contactPhone)) {
         this.count=3;
+        this.tip='warning';
         this.info='请输入正确的手机号码';
         return;
       }
+      let _this = this;
       let obj = {
         person: this.organForm.contactName,
         phone : this.organForm.contactPhone,
@@ -92,7 +91,9 @@ const index = {
       }
 
       this.$http.post('/Form/submit', obj).then(function (response) {
-        alert(11)
+        _this.count=3;
+        _this.info='提交成功！';
+        _this.tip='success'
       })
         .catch(function (error) {
           util.reqFail(error)
@@ -115,8 +116,27 @@ const index = {
       let r2=/^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
       if (!r1.test(this.personForm.phone) && !r2.test(this.personForm.phone)) {
         this.count=3;
+        this.tip='warning';
         this.info='请输入正确的手机号码';
       }
+
+      let _this = this;
+      let obj = {
+        person: this.personForm.name,
+        phone : this.personForm.phone,
+        addres: this.personForm.location,
+        type  : 1,
+        project: this.personForm.selected
+      }
+
+      this.$http.post('/Form/submit', obj).then(function (response) {
+        _this.count=3;
+        _this.info='提交成功！';
+        _this.tip='success'
+      })
+        .catch(function (error) {
+          util.reqFail(error)
+        });
     }
 
   }

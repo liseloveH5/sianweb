@@ -16,7 +16,7 @@ export default new Router({
       component: () => import(/* webpackChunkName: "contact" */ '@/pages/news/list/index.vue')
     },
     {
-      path: '/news/detail',
+      path: '/news/detail/:id',
       component: () => import(/* webpackChunkName: "contact" */ '@/pages/news/detail/index.vue')
     },
     // 联系我们

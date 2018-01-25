@@ -10,7 +10,6 @@ const index = {
   // 挂载之后 相当于原来的ready
   mounted: function () {
     this.$nextTick(function () {
-      console.log(this.$vm.$route.params)
       // 保证 this.$el 已经插入文档
       this.getDetailData();
     })
@@ -25,13 +24,13 @@ const index = {
     getDetailData(){
       // 发送请求
       var obj = {
-        id: 17
+        id: this.$route.params.id
       }
       this.$http.post('/News/info', obj).then(function (response) {
-        alert(11)
+        // alert(11)
       })
         .catch(function (error) {
-          alert(222)
+          // alert(222)
           util.reqFail(error)
         });
 
