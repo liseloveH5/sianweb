@@ -8,13 +8,21 @@
 export default {
   name: 'app',
   mounted() {
-    //　全局初始化
-    this.init();
+    this.$nextTick(function () {
+      //　全局初始化
+      this.init();
+    })
   },
   methods: {
     init(){
-      // 申明全局变量
-
+      let _this = this;
+      // 初始化获取菜单
+      this.$http.post('/System/nav').then(function (data) {
+        _this.$store.dispatch('setHeader',data);
+      })
+      .catch(function (error) {
+        util.reqFail(error)
+      });
     }
   }
 
