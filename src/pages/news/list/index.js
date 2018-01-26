@@ -6,6 +6,8 @@ const index = {
 
   data() {
     return {
+      totalpage:null,
+      pageSize:10,
       list:[],
       currentPage: 1,
     }
@@ -19,10 +21,14 @@ const index = {
     })
   },
 
-  /* watch: {
+   watch: {
      // 如果路由有变化，会再次执行该方法
-     '$route': 'routerChange'
-   },*/
+     //*'$route': 'routerChange'
+     currentPage: function(){
+       this.getListData();
+     }
+
+   },
 
   methods: {
     getListData() {
@@ -32,12 +38,13 @@ const index = {
         params: {
           id: 17,
           key: '',
-          page: 1,
-          size: 8,
+          page: _this.currentPage,
+          size: _this.pageSize,
         }
       }
       this.$http.get('/News/newslist', obj).then(function (res) {
-        _this.list = res
+        _this.list = res.data
+        _this.totalpage = Math.ceil(res.count / obj.params.size)
       })
         .catch(function (error) {
           util.reqFail(error)
