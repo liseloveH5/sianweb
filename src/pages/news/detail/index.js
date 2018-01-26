@@ -24,13 +24,14 @@ const index = {
     getDetailData(){
       // 发送请求
       var obj = {
-        id: this.$route.params.id
+        params:{
+          id: this.$route.params.id
+        }
       }
-      this.$http.post('/News/info', obj).then(function (response) {
-        alert(11)
+      this.$http.get('/News/info', obj).then(function (res) {
+        console.log(222,res)
       })
         .catch(function (error) {
-          // alert(222)
           util.reqFail(error)
         });
 
