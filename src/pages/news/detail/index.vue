@@ -1,29 +1,26 @@
 <template>
   <div class="common-page news-detail">
     <global-header></global-header>
-    <div class="img-wrap"><img src="@/assets/images/main/friends-bg.png" /></div>
+    <div class="img-wrap"><img :src="newsDetail.thumbnail" /></div>
     <div class="common-contain container">
       <b-row >
         <b-col cols="3">
 
           <b-list-group class="sticky-top">
-            <b-list-group-item >资讯中心</b-list-group-item>
-            <b-list-group-item to="" active>公司简讯</b-list-group-item>
-            <b-list-group-item to="">行业简讯</b-list-group-item>
-            <b-list-group-item to="">政策法规</b-list-group-item>
+            <b-list-group-item :to="item.id" v-for="item in navList" :key="item.id">{{item.name}}</b-list-group-item>
           </b-list-group>
         </b-col>
 
         <b-col cols="9">
 
-          <b-card title="思安医疗荣获2017年第四届诺贝尔奖获得者医学峰会创新创业大赛国际创新奖"
+          <b-card :title="newsDetail.post_title"
                   class="detail-header">
-            <div class="date">发布日期：2018-01-07 {{1516806360 | dateFormat}}</div>
-            <div class="desc">公司资讯  /  作者： 某某  /  来源</div>
-            <div class="detail-container">
-              <p>2017年6月30日至7月2日，第二届光谷国际生物产业博览会在光谷科技会展中心隆重召开，本届生博会以“创新引领、生命健康”为主题，吸引了来自海内外众多知名研发机构、医疗机构、金融机构、企业、人才团队集聚，思安医疗作为本次生博会的参展企业，展会期间，详细的向各位专家、同行、投资机构等介绍了我司CAR-T技术的研发水平、临床应有情况，受到了广泛的关注，吸引了各界的目光！</p>
-              <img src="http://oyqbjwu6v.bkt.clouddn.com/blog/180116/h4kA8G7G0D.png" alt="">
-              <img src="http://oyqbjwu6v.bkt.clouddn.com/blog/180116/GmEeHBlghD.png" alt="">
+            <div class="date">发布日期：{{newsDetail.published_time}}</div>
+            <div class="desc">来源: {{newsDetail.post_source}}</div>
+            <div class="detail-container" v-html="content">
+
+            <!--  <img src="http://oyqbjwu6v.bkt.clouddn.com/blog/180116/h4kA8G7G0D.png" alt="">
+              <img src="http://oyqbjwu6v.bkt.clouddn.com/blog/180116/GmEeHBlghD.png" alt="">-->
             </div>
           </b-card>
 

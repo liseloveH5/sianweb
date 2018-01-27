@@ -12,7 +12,7 @@ export default new Router({
     },
     //新闻中心
     {
-      path: '/news/list',
+      path: '/news/list/:id',
       component: () => import(/* webpackChunkName: "contact" */ '@/pages/news/list/index.vue')
     },
     {
@@ -26,7 +26,7 @@ export default new Router({
     },
     //公共单页
     {
-      path: '/common',
+      path: '/common/:id',
       component: () => import(/* webpackChunkName: "contact" */ '@/pages/common/index.vue')
     },
     //demo
