@@ -14,20 +14,22 @@ const index = {
   mounted: function () {
     this.$nextTick(function () {
       // 保证 this.$el 已经插入文档
-      this.getDetailData()
+      // this.getDetailData()
+      this.initData();
     })
   },
 
-  beforeRouteUpdate(){
-    this.getNav()
-  },
-
-  /* watch: {
+   watch: {
      // 如果路由有变化，会再次执行该方法
-     '$route': 'routerChange'
-   },*/
+     '$route': 'initData'
+   },
 
   methods: {
+    initData(){
+      this.getNav();
+      this.getDetailData();
+    },
+
     getNav(){
       var _this= this
       // 发送请求
