@@ -62,64 +62,33 @@
             <p>CAT-T、TCR-T等系列肿瘤细胞治疗品种的研发，部分品种已进入临床研究阶段</p>
           </div>
           <div class="about-me-list row">
-            <b-card title="公司荣誉"
+            <b-card v-for="(item, index) in enterpriseCatalog"
+                    :title="item.name"
                     img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180121/FcH7J2ChA5.png"
                     img-alt="Image"
                     img-top
                     tag="article"
                     style="max-width: 20rem;"
-                    :class="id == 1 ? 'mb-2 col active' : 'mb-2 col '"
-                    @click="id = 1">
+                    :class="id == index ? 'mb-2 col active' : 'mb-2 col '"
+                    @click="id = index">
               <div class="card-letter"><h3 class="img text-center">H</h3></div>
               <p class="text-center">Company honors</p>
-            </b-card>
-            <b-card title="公司发展"
-                    img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180121/I1EDeKBmEB.png"
-                    img-alt="Image"
-                    img-top
-                    tag="article"
-                    style="max-width: 20rem;"
-                    :class="id == 2 ? 'mb-2 col active' : 'mb-2 col '"
-                    @click="id = 2">
-              <div class="card-letter"><h3 class="img text-center">D</h3></div>
-              <p class="text-center">Company development</p>
-            </b-card>
-            <b-card title="公司文化"
-                    img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180121/51d1f5gElH.png"
-                    img-alt="Image"
-                    img-top
-                    tag="article"
-                    style="max-width: 20rem;"
-                    :class="id == 3 ? 'mb-2 col active' : 'mb-2 col '"
-                    @click="id = 3">
-              <div class="card-letter"><h3 class="img text-center">C</h3></div>
-              <p class="text-center">Company culture</p>
-            </b-card>
-            <b-card title="公司团队"
-                    img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180121/2cbFl02EDi.png"
-                    img-alt="Image"
-                    img-top
-                    tag="article"
-                    style="max-width: 20rem;"
-                    :class="id == 4 ? 'mb-2 col active' : 'mb-2 col '"
-                    @click="id = 4">
-              <div class="card-letter"><h3 class="img text-center">T</h3></div>
-              <p class="text-center">Company team</p>
             </b-card>
 
           </div>
 
         </div>
       </div>
+
       <div class="pannel products tab-uniform">
         <div class="pannel-title"><p>产品中心</p></div>
         <b-card no-body>
           <span class="icon-arrow"></span>
           <b-tabs pills card>
-            <b-tab title="CAR-T系列" active>
+            <b-tab v-for="item in productCatalog" :title="item.name" active>
                 Tab Contents 1
             </b-tab>
-            <b-tab title="TCR-T系列">
+            <!--<b-tab title="TCR-T系列">
                 Tab Contents 2
             </b-tab>
             <b-tab title="CAR-NK系列">
@@ -127,7 +96,7 @@
             </b-tab>
             <b-tab title="其他产品">
                 Tab Contents 4
-            </b-tab>
+            </b-tab>-->
           </b-tabs>
         </b-card>
 

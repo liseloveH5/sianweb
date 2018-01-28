@@ -27,11 +27,11 @@
           <div class="detail-footer">
             <div class="row">
               <div class="col-5 text-left">
-                <span to="/">上一篇：</span>
-                <b-link to="/" >思安医疗荣获2017年第四届诺贝尔奖获得者...</b-link>
+                <span>上一篇：</span>
+                <b-link @click="getDetailData(around.prev.id)" :to="around.prev.id">{{around.prev.post_title}}</b-link>
               </div>
               <div class="offset-2 col-5 text-right ">
-                <b-link to="/" >思安医疗荣获2017年第四届诺贝尔奖获得者...</b-link>
+                <b-link @click="getDetailData(around.next.id)" :to="around.next.id">{{around.next.post_title}}</b-link>
                 <span >：下一篇</span>
               </div>
             </div>
