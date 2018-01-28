@@ -8,12 +8,15 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js",
-    "deploy": "npm run build && push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy-github": "npm run build && push-dir --dir=dist --branch=gh-pages --cleanup",
+    "deploy-online": "npm run build && gulp deploy-online"
   },
   "dependencies": {
     "axios": "^0.17.1",
     "bootstrap": "4.0.0-beta.2",
     "bootstrap-vue": "^1.4.0",
+    "gulp": "^3.9.1",
+    "gulp-sftp": "^0.1.5",
     "jquery": "^3.2.1",
     "lodash": "^4.17.4",
     "vue": "^2.5.2",
