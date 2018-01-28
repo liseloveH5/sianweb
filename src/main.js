@@ -22,6 +22,11 @@ Vue.use(BootstrapVue);
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+
+// 将Promise抛出为全局对象  解决ie10无法打开问题
+window.Promise = Promise
+
+
 // 引用第三方ajax插件
 import axios from 'axios'
 import qs from 'qs';
