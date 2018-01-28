@@ -18,6 +18,10 @@ const index = {
     })
   },
 
+  beforeRouteUpdate(){
+    this.getNav()
+  },
+
   /* watch: {
      // 如果路由有变化，会再次执行该方法
      '$route': 'routerChange'
@@ -25,7 +29,19 @@ const index = {
 
   methods: {
     getNav(){
-
+      var _this= this
+      // 发送请求
+      var obj = {
+        params:{
+          id: this.$route.params.id
+        }
+      }
+      this.$http.get('/News/pagelist', obj).then(function (res) {
+        _this.navList = res.category
+      })
+        .catch(function (error) {
+          util.reqFail(error)
+        });
     },
     getDetailData(){
       var _this= this
@@ -36,7 +52,6 @@ const index = {
         }
       }
       this.$http.get('/News/info', obj).then(function (res) {
-        _this.navList = res.category
         _this.picUrl = res.thumbnail
         _this.content = util.htmlDecode(res.post_content)
       })

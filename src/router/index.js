@@ -21,7 +21,7 @@ export default new Router({
     },
     // 联系我们
     {
-      path: '/contact/application',
+      path: '/contact/application/:id',
       component: () => import(/* webpackChunkName: "contact" */ '@/pages/contact/application/index.vue')
     },
     //公共单页
