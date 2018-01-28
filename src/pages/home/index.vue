@@ -132,6 +132,7 @@
         </b-card>
 
       </div>
+<!--
 
       <div class="pannel service">
         <div class="container">
@@ -167,6 +168,7 @@
           </div>
         </div>
       </div>
+-->
 
       <div class="pannel news tab-uniform">
         <div class="container">

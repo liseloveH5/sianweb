@@ -3,6 +3,11 @@
     <global-header></global-header>
     <div class="img-wrap"><img src="@/assets/images/main/friends-bg.png" /></div>
     <div class="common-contain container">
+      <b-alert :show="count"
+               @dismissed="count=0"
+               @dismiss-count-down="countDownChanged"
+               :variant="tip">{{info}}
+      </b-alert>
       <b-row >
         <b-col cols="3">
 
@@ -76,7 +81,7 @@
 
                   <b-row class="form-button-row">
                     <b-col offset-sm="2" sm="4" class="">
-                      <b-button type="submit" variant="primary" >提交</b-button>
+                      <b-button type="submit" variant="primary">提交</b-button>
                     </b-col>
                   </b-row>
                 </b-form>

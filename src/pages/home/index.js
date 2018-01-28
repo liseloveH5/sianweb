@@ -7,7 +7,8 @@ const index = {
     return {
       slide: 0,
       sliding: null,
-      id: 1
+      id: 1,
+
     }
   },
 
@@ -15,6 +16,7 @@ const index = {
   mounted: function () {
     this.$nextTick(function () {
       // 保证 this.$el 已经插入文档
+      this.getInfo ()
     })
   },
 
@@ -29,6 +31,28 @@ const index = {
     },
     onSlideEnd (slide) {
       this.sliding = false
+    },
+    getInfo () {
+      // 获取友情链接
+      this.$http.get('/System/friend').then(function (res) {
+        console.log(777, res)
+      })
+        .catch(function (error) {
+          util.reqFail(error)
+        });
+
+      //获取swiper广告位
+      var adObj={
+        params:{
+          key:'banner'
+        }
+      }
+      this.$http.get('/Ad/list', adObj).then(function (res) {
+        console.log(666, res)
+      })
+        .catch(function (error) {
+          util.reqFail(error)
+        });
     }
   }
 
