@@ -19,30 +19,14 @@
           >
 
 
-            <b-carousel-slide img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180115/C4FC3jJGhd.jpg">
+            <b-carousel-slide v-for="item in dataBanner"
+                              :key="item.id"
+                              :img-src="item.image">
               <div class="text-wrap">
-                <h3>为人类健康</h3>
-                <h2>提供技术和服务</h2>
-                <p>Provide Technology and Services For Hunman Health</p>
-                <b-button variant="secondary" to="/contact/application">申请入口</b-button>
-              </div>
-            </b-carousel-slide>
-
-            <b-carousel-slide img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180115/C4FC3jJGhd.jpg">
-              <div class="text-wrap">
-                <h3>为人类健康</h3>
-                <h2>提供技术和服务</h2>
-                <p>Provide Technology and Services For Hunman Health</p>
-                <b-button variant="secondary" to="/contact/application">联系我们</b-button>
-              </div>
-            </b-carousel-slide>
-
-            <b-carousel-slide img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180115/C4FC3jJGhd.jpg">
-              <div class="text-wrap">
-                <h3>为人类健康</h3>
-                <h2>提供技术和服务</h2>
-                <p>Provide Technology and Services For Hunman Health</p>
-                <b-button variant="secondary" to="/contact/application">联系我们</b-button>
+                <h3>{{item.content}}</h3>
+                <h2>{{item.description}}</h2>
+                <p><!--Provide Technology and Services For Hunman Health--></p>
+                <b-button variant="secondary" :to="item.url">申请入口</b-button>
               </div>
             </b-carousel-slide>
 
@@ -63,6 +47,7 @@
           </div>
           <div class="about-me-list row">
             <b-card v-for="(item, index) in enterpriseCatalog"
+                    :key="item.id"
                     :title="item.name"
                     img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180121/FcH7J2ChA5.png"
                     img-alt="Image"
@@ -85,18 +70,12 @@
         <b-card no-body>
           <span class="icon-arrow"></span>
           <b-tabs pills card>
-            <b-tab v-for="item in productCatalog" :title="item.name" active>
-                Tab Contents 1
+            <b-tab v-for="item in productCatalog"
+                   :key="item.id"
+                   :title="item.name"
+                   @click="getProduct(item.id)">
+                <div v-html="content"></div>
             </b-tab>
-            <!--<b-tab title="TCR-T系列">
-                Tab Contents 2
-            </b-tab>
-            <b-tab title="CAR-NK系列">
-                Tab Contents 3
-            </b-tab>
-            <b-tab title="其他产品">
-                Tab Contents 4
-            </b-tab>-->
           </b-tabs>
         </b-card>
 
@@ -144,63 +123,25 @@
           <div class="pannel-title"><p>资讯中心</p></div>
           <b-card no-body>
             <b-tabs pills card>
-              <b-tab title="公司资讯" active>
+              <b-tab v-for="item in newsCatalog"
+                     :title="item.name"
+                     :key="item.id"
+                     @click="getNews(item.id)">
                 <div class="content-wrap">
                   <div class="news-list">
-                    <div class="row">
-                      <div class="news-item col row">
+                      <div :class="'news-item row direction-' + index" v-for="(childItem, index) in list" :key="childItem.id">
                         <div class="img-wrap col">
-                          <img src="http://oyqbjwu6v.bkt.clouddn.com/blog/180115/fGidhf2AjF.png"/>
+                          <img :src="childItem.more"/>
                         </div>
                         <div class="text-wrap col">
-                          <span class="arrow-left"></span>
-                          <h5>华北制药集团</h5>
-                          <p>9月14日，为期三天的2017第四飒沓vhjeeasjhsdjhdshdshmdsskcn凯撒活动开始届诺贝尔奖获得者医学峰会在贵阳国际生态会议中心隆重开幕。五位诺奖得主、十余位中美院士、2000余位权威专家以及国内外生物医药产业新锐领袖、资深投资机构齐聚“林城”贵阳，围绕“科学：事实与虚构的博弈（Science-Fact...</p>
+                          <span :class="'arrow-' + index"></span>
+                          <h5>{{childItem.post_title}}</h5>
+                          <p>{{childItem.post_excerpt}}</p>
                         </div>
-                      </div>
-                      <div class="news-item col row">
-                        <div class="img-wrap col">
-                          <img src="http://oyqbjwu6v.bkt.clouddn.com/blog/180115/Jf7KJdfAAG.png"/>
-                        </div>
-                        <div class="text-wrap col">
-                          <span class="arrow-left"></span>
-                          <h5>华北制药集团</h5>
-                          <p>########################</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row">
-                      <div class="news-item col row">
-                        <div class="text-wrap col">
-                          <span class="arrow-right"></span>
-                          <h5>华北制药集团</h5>
-                          <p>########################</p>
-                        </div>
-                        <div class="img-wrap col">
-                          <img src="http://oyqbjwu6v.bkt.clouddn.com/blog/180115/I6B4ljL8Ai.png"/>
-                        </div>
-                      </div>
-                      <div class="news-item col row">
-                        <div class="text-wrap col">
-                          <span class="arrow-right"></span>
-                          <h5>华北制药集团</h5>
-                          <p>########################</p>
-                        </div>
-                        <div class="img-wrap col">
-                          <img src="http://oyqbjwu6v.bkt.clouddn.com/blog/180115/0i1mJHi7JJ.png"/>
-                        </div>
-                      </div>
                     </div>
 
                   </div>
                 </div>
-              </b-tab>
-              <b-tab title="行业新闻">
-                Tab Contents 2
-              </b-tab>
-              <b-tab title="政策法规">
-                Tab Contents 3
               </b-tab>
             </b-tabs>
           </b-card>
@@ -212,26 +153,8 @@
         <div class="container">
           <div class="pannel-title"><p>合作伙伴</p></div>
           <p class="text-center">我们期待与您的真诚合作，共创美好前景。为人类健康提供技术和服务。</p>
-          <div class="pic-wrap row">
-            <div class="col"><img src="@/assets/images/main/co-logo1.jpg"/></div>
-            <div class="col"><img src="@/assets/images/main/co-logo2.jpg"/></div>
-            <div class="col"><img src="@/assets/images/main/co-logo3.jpg"/></div>
-            <div class="col"><img src="@/assets/images/main/co-logo4.jpg"/></div>
-            <div class="col"><img src="@/assets/images/main/co-logo5.jpg"/></div>
-          </div>
-          <div class="pic-wrap row">
-            <div class="col"><img src="@/assets/images/main/co-logo6.jpg"/></div>
-            <div class="col"><img src="@/assets/images/main/co-logo7.jpg"/></div>
-            <div class="col"><img src="@/assets/images/main/co-logo8.jpg"/></div>
-            <div class="col"><img src="@/assets/images/main/co-logo9.jpg"/></div>
-            <div class="col"><img src="@/assets/images/main/co-logo10.jpg"/></div>
-          </div>
-          <div class="pic-wrap row">
-            <div class="col" ><img src="@/assets/images/main/co-logo11.jpg"/></div>
-            <div class="col"><img src="@/assets/images/main/co-logo12.jpg"/></div>
-            <div class="col"><img src="@/assets/images/main/co-logo13.jpg"/></div>
-            <div class="col"><img src="@/assets/images/main/co-logo14.jpg"/></div>
-            <div class="col"></div>
+          <div class="pic-wrap">
+            <div class="col" v-for="item in dateFlink" :key="item.id"><img :src="item.image"/></div>
           </div>
 
         </div>
