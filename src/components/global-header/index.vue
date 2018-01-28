@@ -20,7 +20,7 @@
             <template v-if="item.son.length > 0">
               <b-nav-item-dropdown :text="item.name">
                 <span></span>
-                <b-dropdown-item v-for="son in item.son" :key="son.id" :to="son.href + '/' + son.id">
+                <b-dropdown-item v-for="son in item.son" :key="son.id" :to="son.href + son.id">
                   {{son.name}}
                 </b-dropdown-item>
               </b-nav-item-dropdown>

@@ -36,7 +36,7 @@ export default class Util extends Constant{
   // ajax错误提示
   reqFail(error) {
     // 如果msg是一个对象  则不显示错误
-   alert(error)
+    console.log(error)
   }
 
   //vue 获取原始对象

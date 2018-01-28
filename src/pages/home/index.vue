@@ -19,7 +19,7 @@
           >
 
 
-            <b-carousel-slide v-for="item in dataBanner"
+            <b-carousel-slide v-for="item in dataBanner.list"
                               :key="item.id"
                               :img-src="item.image">
               <div class="text-wrap">
