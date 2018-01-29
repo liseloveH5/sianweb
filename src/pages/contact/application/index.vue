@@ -1,7 +1,7 @@
 <template>
   <div class="common-page science-application">
     <global-header></global-header>
-    <div class="img-wrap"><img src="@/assets/images/main/friends-bg.png" /></div>
+    <div class="img-wrap"><img :src="picUrl" /></div>
     <div class="common-contain container">
       <b-alert :show="count"
                @dismissed="count=0"
@@ -12,10 +12,7 @@
         <b-col cols="3">
 
           <b-list-group class="sticky-top">
-            <b-list-group-item >资讯中心</b-list-group-item>
-            <b-list-group-item to="" active>公司简讯</b-list-group-item>
-            <b-list-group-item to="">行业简讯</b-list-group-item>
-            <b-list-group-item to="">政策法规</b-list-group-item>
+            <b-list-group-item :to="(item.type+ '/' + item.id) | pageType" v-for="item in navList" :key="item.id">{{item.name}}</b-list-group-item>
           </b-list-group>
         </b-col>
 

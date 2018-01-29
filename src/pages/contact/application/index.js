@@ -22,6 +22,8 @@ const index = {
         selected: '1',
         options: []
       },
+      navList:[],
+      picUrl:''
     }
   },
 
@@ -31,6 +33,7 @@ const index = {
     this.$nextTick(function () {
       // 保证 this.$el 已经插入文档
       this.getProjectsList ()
+      this.getNav()
     })
   },
 
@@ -40,6 +43,23 @@ const index = {
    },*/
 
   methods: {
+    getNav(){
+      var _this= this
+      // 发送请求
+      var obj = {
+        params:{
+          id: this.$route.params.id
+        }
+      }
+      this.$http.get('/News/lists', obj).then(function (res) {
+        _this.navList = res.lists
+        _this.picUrl = res.info.more
+      })
+        .catch(function (error) {
+          util.reqFail(error)
+        });
+    },
+
     // 获取表单提交列表
     getProjectsList () {
       var _this = this

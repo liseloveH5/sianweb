@@ -11,7 +11,11 @@ const index = {
       dateFlink:[],
       content:'',
       list:'',
-      dataBanner:''
+      dataBanner:'',
+      compInfo:{
+        text:'',
+        list:[]
+      }
     }
   },
   computed:{
@@ -52,6 +56,19 @@ const index = {
       }
       this.$http.get('/Ad/slide', adObj).then(function (res) {
         _this.dataBanner = res;
+      })
+        .catch(function (error) {
+          util.reqFail(error)
+        });
+      // 获取公司信息
+      var compObj={
+        params:{
+          key:'about'
+        }
+      }
+      this.$http.get('/Ad/slide', compObj).then(function (res) {
+        _this.compInfo.text=res.info.remark
+        _this.compInfo.list=res.list
       })
         .catch(function (error) {
           util.reqFail(error)

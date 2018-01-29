@@ -41,23 +41,21 @@
         <div class="container">
           <div class="pannel-title"><p>关于思安</p></div>
           <div class="about-me-desc">
-            <p>武汉思安医疗技术有限公司成立于2015年，是一家致力于生物医药产品研发、临床应用的高新技术企业，公司由多位在美国肿瘤研究领域</p>
-            <p>卓有建树的科学家和中国医药企业长期从事经营管理的专业人士共同创建。思安医疗拥有多项生物医药核心专利技术。目前，公司已经开展了</p>
-            <p>CAT-T、TCR-T等系列肿瘤细胞治疗品种的研发，部分品种已进入临床研究阶段</p>
+            <p>{{compInfo.text}}</p>
           </div>
           <div class="about-me-list row">
-            <b-card v-for="(item, index) in enterpriseCatalog"
+            <b-card v-for="(item, index) in compInfo.list"
                     :key="item.id"
-                    :title="item.name"
-                    img-src="http://oyqbjwu6v.bkt.clouddn.com/blog/180121/FcH7J2ChA5.png"
+                    :title="item.title"
+                    :img-src="item.image"
                     img-alt="Image"
                     img-top
                     tag="article"
                     style="max-width: 20rem;"
                     :class="id == index ? 'mb-2 col active' : 'mb-2 col '"
                     @click="id = index">
-              <div class="card-letter"><h3 class="img text-center">H</h3></div>
-              <p class="text-center">Company honors</p>
+              <div class="card-letter"><h3 class="img text-center">{{item.alias | firstLetter}}</h3></div>
+              <p class="text-center">{{item.description}}</p>
             </b-card>
 
           </div>
@@ -65,7 +63,7 @@
         </div>
       </div>
 
-      <div class="pannel products tab-uniform">
+     <!-- <div class="pannel products tab-uniform">
         <div class="pannel-title"><p>产品中心</p></div>
         <b-card no-body>
           <span class="icon-arrow"></span>
@@ -79,7 +77,7 @@
           </b-tabs>
         </b-card>
 
-      </div>
+      </div>-->
 <!--
 
       <div class="pannel service">
@@ -118,6 +116,7 @@
       </div>
 -->
 
+<!--
       <div class="pannel news tab-uniform">
         <div class="container">
           <div class="pannel-title"><p>资讯中心</p></div>
@@ -148,6 +147,7 @@
         </div>
       </div>
 
+-->
 
       <div class="pannel friends">
         <div class="container">

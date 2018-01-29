@@ -29,7 +29,7 @@
 
           </div>
 
-          <b-pagination-nav align="center" :number-of-pages="totalpage" base-url="#" v-model="currentPage"/>
+          <b-pagination-nav v-if="totalpage" align="center" :number-of-pages="totalpage" base-url="#" v-model="currentPage"/>
         </b-col>
 
       </b-row>

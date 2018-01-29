@@ -10,6 +10,8 @@ const index = {
       pageSize:10,
       list:[],
       currentPage: 1,
+      navList:[],
+      picUrl:[]
     }
   },
 
@@ -53,19 +55,20 @@ const index = {
 
     },
     getNavData() {
-      var _this = this;
+      var _this= this
+      // 发送请求
       var obj = {
-        params: {
-          id: this.$route.params.id,
+        params:{
+          id: this.$route.params.id
         }
       }
       this.$http.get('/News/lists', obj).then(function (res) {
-        console.log(444,res)
+        _this.navList = res.lists
+        _this.picUrl = res.info.more
       })
         .catch(function (error) {
           util.reqFail(error)
         });
-
     }
 
   },
