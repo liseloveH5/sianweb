@@ -150,7 +150,7 @@
 
 -->
 
-      <div class="pannel friends">
+    <!--  <div class="pannel friends">
         <div class="container">
           <div class="pannel-title"><p>合作伙伴</p></div>
           <p class="text-center">我们期待与您的真诚合作，共创美好前景。为人类健康提供技术和服务。</p>
@@ -160,7 +160,7 @@
 
         </div>
 
-      </div>
+      </div>-->
     </div>
 
     <div class="pannel co-info">

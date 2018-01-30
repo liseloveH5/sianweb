@@ -7,7 +7,7 @@ const index = {
   data() {
     return {
       totalpage:null,
-      pageSize:10,
+      pageSize:1,
       list:[],
       currentPage: 1,
       navList:[],
@@ -19,6 +19,7 @@ const index = {
   mounted: function () {
     this.$nextTick(function () {
       // 保证 this.$el 已经插入文档
+      this.getNavData();
       this.getListData();
     })
   },
@@ -64,7 +65,7 @@ const index = {
       }
       this.$http.get('/System/navson', obj).then(function (res) {
         _this.navList = res.list
-        _this.picUrl = res.info.icon
+        _this.picUrl = res.father.icon
       })
         .catch(function (error) {
           util.reqFail(error)

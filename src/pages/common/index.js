@@ -27,7 +27,6 @@ const index = {
   methods: {
     initData(){
       this.getNav();
-      this.getDetailData();
     },
 
     getNav(){
@@ -40,21 +39,22 @@ const index = {
       }
       this.$http.get('/System/navson', obj).then(function (res) {
         _this.navList = res.list
-        _this.picUrl = res.info.icon
+        _this.picUrl = res.father.icon
+        _this.getDetailData(res.info.href);
       })
         .catch(function (error) {
           util.reqFail(error)
         });
     },
-    getDetailData(){
+    getDetailData(id){
       var _this= this
       // 发送请求
       var obj = {
         params:{
-          id: this.$route.params.id
+          id: id
         }
       }
-      this.$http.get('/News/info', obj).then(function (res) {
+      this.$http.get('/News/page', obj).then(function (res) {
         _this.picUrl = res.thumbnail
         _this.content = util.htmlDecode(res.post_content)
       })

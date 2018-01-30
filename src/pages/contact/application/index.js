@@ -53,7 +53,7 @@ const index = {
       }
       this.$http.get('/System/navson', obj).then(function (res) {
         _this.navList = res.list
-        _this.picUrl = res.info.icon
+        _this.picUrl = res.father.icon
       })
         .catch(function (error) {
           util.reqFail(error)
