@@ -10,41 +10,24 @@ export default new Router({
       path: '/',
       component: () => import('@/pages/home/index.vue')
     },
-    //走进思安
-    {
-      path: '/introduce/aboutus',
-      component: () => import(/* webpackChunkName: "contact" */ '@/pages/introduce/aboutus/index.vue')
-    },
-    {
-      path: '/introduce/leaderMessage',
-      component: () => import(/* webpackChunkName: "contact" */ '@/pages/introduce/leaderMessage/index.vue')
-    },
-    {
-      path: '/introduce/development',
-      component: () => import(/* webpackChunkName: "contact" */ '@/pages/introduce/development/index.vue')
-    },
-    {
-      path: '/introduce/cultrue',
-      component: () => import(/* webpackChunkName: "contact" */ '@/pages/introduce/cultrue/index.vue')
-    },
     //新闻中心
     {
-      path: '/news/list',
+      path: '/news/list/:id',
       component: () => import(/* webpackChunkName: "contact" */ '@/pages/news/list/index.vue')
     },
-    //产品中心
     {
-      path: '/product/list',
-      component: () => import(/* webpackChunkName: "contact" */ '@/pages/product/list/index.vue')
+      path: '/news/detail/:id',
+      component: () => import(/* webpackChunkName: "contact" */ '@/pages/news/detail/index.vue')
     },
     // 联系我们
     {
-      path: '/contact/message',
-      component: () => import(/* webpackChunkName: "contact" */ '@/pages/contact/message/index.vue')
+      path: '/contact/application/:id',
+      component: () => import(/* webpackChunkName: "contact" */ '@/pages/contact/application/index.vue')
     },
+    //公共单页
     {
-      path: '/science/application',
-      component: () => import(/* webpackChunkName: "contact" */ '@/pages/science/application/index.vue')
+      path: '/common/:id',
+      component: () => import(/* webpackChunkName: "contact" */ '@/pages/common/index.vue')
     },
     //demo
     {

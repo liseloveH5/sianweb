@@ -1,4 +1,4 @@
-
+import { mapState } from 'vuex'
 
 const index = {
   name: 'demo',
@@ -7,21 +7,36 @@ const index = {
     return {
       slide: 0,
       sliding: null,
-      id: 1
+      id: 1,
+      dateFlink:[],
+      content:'',
+      list:'',
+      dataBanner:'',
+      compInfo:{
+        text:'',
+        list:[]
+      }
     }
+  },
+  computed:{
+    ...mapState({
+      // 传字符串参数 'count' 等同于 `state => state.count`
+      header: 'header',
+      enterpriseCatalog:state => state.header[1].son,
+      productCatalog:state => state.header[2].son,
+      newsCatalog:state => state.header[4].son,
+    }),
   },
 
   // 挂载之后 相当于原来的ready
   mounted: function () {
     this.$nextTick(function () {
       // 保证 this.$el 已经插入文档
+      this.getInfo()
+      this.getNews(this.newsCatalog[0].id)
+      this.getProduct(this.productCatalog[0].id)
     })
   },
-
-  /* watch: {
-     // 如果路由有变化，会再次执行该方法
-     '$route': 'routerChange'
-   },*/
 
   methods: {
     onSlideStart (slide) {
@@ -29,7 +44,85 @@ const index = {
     },
     onSlideEnd (slide) {
       this.sliding = false
+    },
+
+    getInfo () {
+      var _this=this;
+      //获取swiper广告位
+      var adObj={
+        params:{
+          key:'banner'
+        }
+      }
+      this.$http.get('/Ad/slide', adObj).then(function (res) {
+        _this.dataBanner = res;
+      })
+        .catch(function (error) {
+          util.reqFail(error)
+        });
+      // 获取公司信息
+      var compObj={
+        params:{
+          key:'about'
+        }
+      }
+      this.$http.get('/Ad/slide', compObj).then(function (res) {
+        _this.compInfo.text=res.info.remark
+        _this.compInfo.list=res.list
+      })
+        .catch(function (error) {
+          util.reqFail(error)
+        });
+      // 获取友情链接
+      this.$http.get('/System/friend').then(function (res) {
+        _this.dateFlink = res;
+      })
+        .catch(function (error) {
+          util.reqFail(error)
+        });
+    },
+
+    // 获取产品页面参数
+    getProduct:function(id){
+      var _this=this;
+      // 发送请求
+      var obj = {
+        params:{
+          id: id
+        }
+      }
+      this.$http.get('/News/info', obj).then(function (res) {
+        _this.content = util.htmlDecode(res.post_content)
+      })
+        .catch(function (error) {
+          util.reqFail(error)
+        });
+
+    },
+    // 获取新闻列表
+    getNews:function(id){
+      console.log(999999)
+      var _this=this
+      var obj = {
+        params: {
+          id: id,
+          key: '',
+          page: 1,
+          size: 4,
+        }
+      }
+      this.$http.get('/News/newslist', obj).then(function (res) {
+        _this.list = res.data
+        console.log(333, _this.list)
+      })
+        .catch(function (error) {
+          util.reqFail(error)
+        });
+
     }
+
+
+
   }
 
 };
