@@ -15,7 +15,8 @@ const index = {
       compInfo:{
         text:'',
         list:[]
-      }
+      },
+      webInfo:''
     }
   },
   computed:{
@@ -73,6 +74,14 @@ const index = {
         .catch(function (error) {
           util.reqFail(error)
         });
+      // 获取底部公共信息
+      this.$http.get('/System/seo').then(function (res) {
+        _this.webInfo= res;
+        console.log(333, res)
+      })
+        .catch(function (error) {
+          util.reqFail(error)
+        });
       // 获取友情链接
       this.$http.get('/System/friend').then(function (res) {
         _this.dateFlink = res;
@@ -101,7 +110,6 @@ const index = {
     },
     // 获取新闻列表
     getNews:function(id){
-      console.log(999999)
       var _this=this
       var obj = {
         params: {
@@ -113,7 +121,6 @@ const index = {
       }
       this.$http.get('/News/newslist', obj).then(function (res) {
         _this.list = res.data
-        console.log(333, _this.list)
       })
         .catch(function (error) {
           util.reqFail(error)

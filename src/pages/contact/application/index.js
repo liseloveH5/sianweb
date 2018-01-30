@@ -51,9 +51,9 @@ const index = {
           id: this.$route.params.id
         }
       }
-      this.$http.get('/News/lists', obj).then(function (res) {
-        _this.navList = res.lists
-        _this.picUrl = res.info.more
+      this.$http.get('/System/navson', obj).then(function (res) {
+        _this.navList = res.list
+        _this.picUrl = res.info.icon
       })
         .catch(function (error) {
           util.reqFail(error)

@@ -167,12 +167,12 @@
       <div class="co-qr-code"><img src="@/assets/images/main/qr-code.png"></div>
       <p class="text-center co-name">武汉思安医疗技术有限公司</p>
       <div class="row">
-        <span class="col">电话：（027）81785853</span>
-        <span class="col">传真：（027）81785903</span>
-        <span class="col">网址：www.11111.com</span>
-        <span class="col">邮编：430207</span>
+        <span class="col">电话：{{webInfo.tel}}</span>
+        <span class="col">传真：{{webInfo.fix}}</span>
+        <span class="col">网址：{{webInfo.site_name}}</span>
+        <span class="col">站长邮箱：{{webInfo.site_admin_email}}</span>
       </div>
-      <p class="text-center co-addr">地址：湖北省武汉市东湖高新区高新大道818号医疗器械园B9栋D区3楼</p>
+      <p class="text-center co-addr">地址：{{webInfo.address}}</p>
     </div>
 
     <global-footer ></global-footer>
