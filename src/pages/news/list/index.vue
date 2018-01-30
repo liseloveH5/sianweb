@@ -27,9 +27,6 @@
 
           </div>
 
-          {{currentPage}}
-
-
           <b-pagination v-if="totalRow" align="center" :total-rows="totalRow" :per-page="pageSize" v-model="currentPage"/>
         </b-col>
 

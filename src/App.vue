@@ -17,8 +17,12 @@ export default {
     init(){
       let _this = this;
       // 初始化cookies
-      if (! util.getCookie('lang')){
+      var lang = util.getCookie('lang');
+      if (!lang){
         util.setCookie('lang', 1)
+        _this.$store.dispatch('setLang',1);
+      }else{
+        _this.$store.dispatch('setLang',lang);
       }
       // 初始化获取菜单
       this.$http.post('/System/nav').then(function (data) {

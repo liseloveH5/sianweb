@@ -75,9 +75,10 @@
       </b-collapse>
     </div>
 
-    <b-button variant="outline-secondary" size='sm' @click="chooseLang" style="position:absolute; right:25px;margin-top:18px; border-radius: 5px; min-width: 70px; padding:.2rem 0;">English</b-button>
-
-
+    <b-button class="btn-lang" variant="outline-secondary" size='sm' @click="chooseLang">
+      <span v-if="lang == 1">English</span>
+      <span v-else>中文</span>
+    </b-button>
 
   </b-navbar>
 </template>

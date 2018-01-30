@@ -31,12 +31,22 @@ const index = {
    },*/
 
   methods: {
+    chooseLang() {
+      if(this.lang == 1){
+        this.$store.dispatch('setLang',2);
+        util.setCookie('lang', 2)
+      } else {
+        this.$store.dispatch('setLang',1);
+        util.setCookie('lang', 1)
+      }
+    }
 
   },
 
   computed: mapState({
     // 传字符串参数 'count' 等同于 `state => state.count`
     header: 'header',
+    lang: 'lang',
   })
 
 };

@@ -24,9 +24,9 @@ const index = {
     ...mapState({
       // 传字符串参数 'count' 等同于 `state => state.count`
       header: 'header',
-      enterpriseCatalog:state => state.header[1].son,
-      productCatalog:state => state.header[2].son,
-      newsCatalog:state => state.header[4].son,
+      // enterpriseCatalog:state => state.header[1].son,
+      // productCatalog:state => state.header[2].son,
+      // newsCatalog:state => state.header[4].son,
     }),
   },
 
@@ -35,8 +35,8 @@ const index = {
     this.$nextTick(function () {
       // 保证 this.$el 已经插入文档
       this.getInfo()
-      this.getNews(this.newsCatalog[0].id)
-      this.getProduct(this.productCatalog[0].id)
+    /*  this.getNews(this.newsCatalog[0].id)
+      this.getProduct(this.productCatalog[0].id)*/
     })
   },
 
@@ -106,7 +106,7 @@ const index = {
     },
 
     // 获取产品页面参数
-    getProduct:function(id){
+ /*   getProduct:function(id){
       var _this=this;
       // 发送请求
       var obj = {
@@ -140,7 +140,7 @@ const index = {
           util.reqFail(error)
         });
 
-    }
+    }*/
 
 
 

@@ -13,6 +13,11 @@ export default {
     commit(types.SET_HEADER, {
       header: header
     })
+  },
+  setLang: ({commit}, lang) => {
+    commit(types.SET_LANG, {
+      lang: lang
+    })
   }
 }
 
