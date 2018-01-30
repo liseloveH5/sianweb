@@ -22,11 +22,15 @@
                        :date="item.published_time"
                        :desc="item.post_excerpt"
                        :id="item.id"
+                       :navid="navId"
             ></list-item>
 
           </div>
 
-          <b-pagination-nav v-if="totalpage" align="center" :number-of-pages="totalpage" base-url="#" v-model="currentPage"/>
+          {{currentPage}}
+
+
+          <b-pagination v-if="totalRow" align="center" :total-rows="totalRow" :per-page="pageSize" v-model="currentPage"/>
         </b-col>
 
       </b-row>

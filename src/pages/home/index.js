@@ -7,7 +7,7 @@ const index = {
     return {
       slide: 0,
       sliding: null,
-      id: 1,
+      id: 0,
       dateFlink:[],
       content:'',
       list:'',
@@ -46,6 +46,11 @@ const index = {
     },
     onSlideEnd (slide) {
       this.sliding = false
+    },
+
+    handleAboutClick(item,index){
+      this.id = index;
+      this.$router.push(item.url);
     },
 
     getInfo () {

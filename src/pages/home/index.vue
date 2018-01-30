@@ -52,9 +52,9 @@
                     img-top
                     tag="article"
                     style="max-width: 20rem;"
-                    :to="'/common/'+ item.id"
+
                     :class="id == index ? 'mb-2 col active' : 'mb-2 col '"
-                    @click="id = index">
+                    @click="handleAboutClick(item,index)">
               <div class="card-letter"><h3 class="img text-center">{{item.alias | firstLetter}}</h3></div>
               <p class="text-center">{{item.description}}</p>
             </b-card>
@@ -165,12 +165,12 @@
 
     <div class="pannel co-info">
       <div class="co-qr-code"><img src="@/assets/images/main/qr-code.png"></div>
-      <p class="text-center co-name">武汉思安医疗技术有限公司</p>
+      <p class="text-center co-name">{{webInfo.company}}</p>
       <div class="row">
         <span class="col">电话：{{webInfo.tel}}</span>
-        <span class="col">传真：{{webInfo.fix}}</span>
-        <span class="col">网址：{{webInfo.site_name}}</span>
-        <span class="col">站长邮箱：{{webInfo.site_admin_email}}</span>
+        <span class="col">传真：{{webInfo.fex}}</span>
+        <span class="col">邮政编码：{{webInfo.postcode}}</span>
+        <span class="col">公司邮箱：{{webInfo.site_admin_email}}</span>
       </div>
       <p class="text-center co-addr">地址：{{webInfo.address}}</p>
     </div>

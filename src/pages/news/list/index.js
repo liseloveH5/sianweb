@@ -6,12 +6,13 @@ const index = {
 
   data() {
     return {
-      totalpage:null,
+      totalRow:null,
       pageSize:1,
       list:[],
       currentPage: 1,
       navList:[],
-      picUrl:[]
+      picUrl:[],
+      navId:''
     }
   },
 
@@ -19,27 +20,36 @@ const index = {
   mounted: function () {
     this.$nextTick(function () {
       // 保证 this.$el 已经插入文档
-      this.getNavData();
-      this.getListData();
+      this.initData();
+      this.navId = this.$route.params.id
     })
   },
 
    watch: {
      // 如果路由有变化，会再次执行该方法
      //*'$route': 'routerChange'
+     '$route': 'initData',
      currentPage: function(){
+
+
        this.getNavData();
        this.getListData();
      }
-
    },
 
   methods: {
+
+    initData(){
+      this.getNavData();
+      this.getListData();
+    },
+
     getListData() {
       let _this = this
       // 发送请求
       var obj = {
         params: {
+          // id: this.$route.params.id,
           id: 17,
           key: '',
           page: _this.currentPage,
@@ -48,7 +58,7 @@ const index = {
       }
       this.$http.get('/News/newslist', obj).then(function (res) {
         _this.list = res.data
-        _this.totalpage = Math.ceil(res.count / obj.params.size)
+        _this.totalRow = res.count;
       })
         .catch(function (error) {
           util.reqFail(error)

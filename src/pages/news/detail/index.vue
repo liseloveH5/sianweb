@@ -1,13 +1,13 @@
 <template>
   <div class="common-page news-detail">
     <global-header></global-header>
-    <div class="img-wrap"><img :src="newsDetail.thumbnail" /></div>
+    <div class="img-wrap"><img :src="picUrl" /></div>
     <div class="common-contain container">
       <b-row >
         <b-col cols="3">
 
           <b-list-group class="sticky-top">
-            <b-list-group-item :to="item.id" v-for="item in navList" :key="item.id">{{item.name}}</b-list-group-item>
+            <b-list-group-item :to="`/news/list/${navid}`" v-for="item in navList" :key="item.id">{{item.name}}</b-list-group-item>
           </b-list-group>
         </b-col>
 
