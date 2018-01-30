@@ -84,9 +84,9 @@ export function pageType(value) {
   if (value) {
     switch (value.split('/')[0]) {
       case '1':
-        return '/common/' + value.split('/')[1];
-      case '2':
         return '/news/list/' + value.split('/')[1];
+      case '2':
+        return '/common/' + value.split('/')[1];
       case '3':
         return '/contact/application/' + value.split('/')[1];
     }

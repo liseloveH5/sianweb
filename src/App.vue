@@ -17,7 +17,9 @@ export default {
     init(){
       let _this = this;
       // 初始化cookies
-      util.setCookie('lang', 0)
+      if (! util.getCookie('lang')){
+        util.setCookie('lang', 1)
+      }
       // 初始化获取菜单
       this.$http.post('/System/nav').then(function (data) {
         _this.$store.dispatch('setHeader',data);
