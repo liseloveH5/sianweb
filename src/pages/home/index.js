@@ -75,6 +75,14 @@ const index = {
         .catch(function (error) {
           util.reqFail(error)
         });
+      // 获取底部公共信息
+      this.$http.get('/System/seo').then(function (res) {
+        _this.webInfo= res;
+        console.log(333, res)
+      })
+        .catch(function (error) {
+          util.reqFail(error)
+        });
       // 获取友情链接
       this.$http.get('/System/friend').then(function (res) {
         _this.dateFlink = res;
