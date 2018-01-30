@@ -1,6 +1,5 @@
 <template>
   <div class="common-page home">
-    1111111111111111
     <global-header ></global-header>
     <div class="common-contain">
       <!--part1:swiper首图-->
@@ -53,6 +52,7 @@
                     img-top
                     tag="article"
                     style="max-width: 20rem;"
+                    :to="'/common/'+ item.id"
                     :class="id == index ? 'mb-2 col active' : 'mb-2 col '"
                     @click="id = index">
               <div class="card-letter"><h3 class="img text-center">{{item.alias | firstLetter}}</h3></div>
