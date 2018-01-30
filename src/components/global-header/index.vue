@@ -75,7 +75,7 @@
       </b-collapse>
     </div>
 
-    <b-button variant="outline-secondary" size='sm' style="position:absolute; right:25px;margin-top:18px; border-radius: 5px; min-width: 70px; padding:.2rem 0;">English</b-button>
+    <b-button variant="outline-secondary" size='sm' @click="chooseLang" style="position:absolute; right:25px;margin-top:18px; border-radius: 5px; min-width: 70px; padding:.2rem 0;">English</b-button>
 
 
 

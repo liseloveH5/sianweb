@@ -4,6 +4,23 @@ import Constant from './Constant';
 // 工具类 继承ajax-axio
 export default class Util extends Constant{
 
+
+  //获取cookie、
+   getCookie(name) {
+    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+    if (arr = document.cookie.match(reg))
+      return (arr[2]);
+    else
+      return null;
+  }
+
+//设置cookie,增加到vue实例方便全局调用
+   setCookie (c_name, value, expiredays) {
+    var exdate = new Date();
+    exdate.setDate(exdate.getDate() + expiredays);
+    document.cookie = c_name + "=" + escape(value) + ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString());
+  };
+
   //html转码
   htmlDecode (text) {
     //1.首先动态创建一个容器标签元素，如DIV
