@@ -7,7 +7,7 @@
         <b-col cols="3">
 
           <b-list-group class="sticky-top">
-            <b-list-group-item :to="`/news/list/${navid}`" v-for="item in navList" :key="item.id">{{item.name}}</b-list-group-item>
+            <b-list-group-item :to="`/news/list/${item.id}`" :active="item.id == navid" v-for="item in navList" :key="item.id">{{item.name}}</b-list-group-item>
           </b-list-group>
         </b-col>
 
