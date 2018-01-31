@@ -167,10 +167,10 @@
       <div class="co-qr-code"><img src="@/assets/images/main/qr-code.png"></div>
       <p class="text-center co-name">{{webInfo.company}}</p>
       <div class="row">
-        <span class="col">电话：{{webInfo.tel}}</span>
-        <span class="col">传真：{{webInfo.fex}}</span>
-        <span class="col">邮政编码：{{webInfo.postcode}}</span>
-        <span class="col">公司邮箱：{{webInfo.site_admin_email}}</span>
+        <span class="col-3">电话：{{webInfo.tel}}</span>
+        <span class="col-3">传真：{{webInfo.fex}}</span>
+        <span class="col-2">邮编：{{webInfo.postcode}}</span>
+        <span class="col-4">公司邮箱：{{webInfo.site_admin_email}}</span>
       </div>
       <p class="text-center co-addr">地址：{{webInfo.address}}</p>
     </div>

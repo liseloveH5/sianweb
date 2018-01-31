@@ -55,7 +55,6 @@ const index = {
         }
       }
       this.$http.get('/News/page', obj).then(function (res) {
-        _this.picUrl = res.thumbnail
         _this.content = util.htmlDecode(res.post_content)
       })
         .catch(function (error) {
