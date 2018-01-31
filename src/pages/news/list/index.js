@@ -30,10 +30,8 @@ const index = {
      //*'$route': 'routerChange'
      '$route': 'initData',
      currentPage: function(){
-
-
        this.getNavData();
-       this.getListData();
+       // this.getListData();
      }
    },
 
@@ -41,15 +39,15 @@ const index = {
 
     initData(){
       this.getNavData();
-      this.getListData();
+      // this.getListData();
     },
 
-    getListData() {
+    getListData(id) {
       let _this = this
       // 发送请求
       var obj = {
         params: {
-          id: this.$route.params.id,
+          id: id,
           key: '',
           page: _this.currentPage,
           size: _this.pageSize,
@@ -75,6 +73,8 @@ const index = {
       this.$http.get('/System/navson', obj).then(function (res) {
         _this.navList = res.list
         _this.picUrl = res.father.icon
+        _this.getListData(res.info.href)
+
       })
         .catch(function (error) {
           util.reqFail(error)
