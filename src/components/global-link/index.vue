@@ -2,7 +2,7 @@
   <div class="global-link">
     <div class="container">
 
-      <b-nav class="justify-content-center nav">
+     <!-- <b-nav class="justify-content-center nav">
         <b-nav-item to="/">首页</b-nav-item>
         <b-nav-item>走进思安</b-nav-item>
         <b-nav-item to="/news/list">新闻中心</b-nav-item>
@@ -10,7 +10,7 @@
         <b-nav-item>科技创新</b-nav-item>
         <b-nav-item to="/contact/message">联系我们</b-nav-item>
       </b-nav>
-
+-->
 
       <div class="comp-info">
         <div class="row">
