@@ -32,6 +32,7 @@ import axios from 'axios'
 import qs from 'qs';
 Vue.prototype.$http = axios
 axios.defaults.baseURL = 'http://api.sianmed.com/web';
+axios.defaults.headers.common['WWW-Authorization'] = 1;
 
 // axios 全局拦截器
 // 降级取消option请求
