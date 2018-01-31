@@ -6,5 +6,8 @@ export default  {
   },
   [types.SET_LANG]: (state, val) => {
     state.lang = val.lang;
+  },
+  [types.SET_FOOTER]: (state, val) => {
+    state.footer = val.footer;
   }
 }

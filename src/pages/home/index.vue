@@ -165,14 +165,16 @@
 
     <div class="pannel co-info">
       <div class="co-qr-code"><img src="@/assets/images/main/qr-code.png"></div>
-      <p class="text-center co-name">{{webInfo.company}}</p>
+      <p class="text-center co-name">{{footer.company}}</p>
       <div class="row">
-        <span class="col-3">电话：{{webInfo.tel}}</span>
-        <span class="col-3">传真：{{webInfo.fex}}</span>
-        <span class="col-2">邮编：{{webInfo.postcode}}</span>
-        <span class="col-4">公司邮箱：{{webInfo.site_admin_email}}</span>
+        <div class="col-8">
+          <span class="col-4">电话：{{footer.tel}}</span>
+          <span class="col-4">传真：{{footer.fex}}</span>
+          <span class="col-4">邮编：{{footer.postcode}}</span>
+        </div>
+        <div class="col-4">邮箱：{{footer.site_admin_email}}</div>
       </div>
-      <p class="text-center co-addr">地址：{{webInfo.address}}</p>
+      <p class="text-center co-addr">地址：{{footer.address}}</p>
     </div>
 
     <global-footer ></global-footer>

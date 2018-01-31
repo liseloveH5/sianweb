@@ -10,6 +10,7 @@ export default new Vuex.Store({
   state: {
     header: [],
     lang:1,
+    footer:'',
   },
   mutations,
   actions,

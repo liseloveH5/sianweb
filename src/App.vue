@@ -31,6 +31,13 @@ export default {
       .catch(function (error) {
         util.reqFail(error)
       });
+      // 初始化获取底部网站信息
+      this.$http.get('/System/seo').then(function (res) {
+        _this.$store.dispatch('setFooter',res);
+      })
+        .catch(function (error) {
+          util.reqFail(error)
+        });
     }
   }
 

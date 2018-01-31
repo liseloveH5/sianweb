@@ -18,6 +18,11 @@ export default {
     commit(types.SET_LANG, {
       lang: lang
     })
+  },
+  setFooter: ({commit}, footer) => {
+    commit(types.SET_FOOTER, {
+      footer: footer
+    })
   }
 }
 

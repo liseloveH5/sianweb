@@ -16,27 +16,27 @@
         <div class="row">
           <div class="col-4">
             <label>电话:</label>
-            <span>(027)81785853</span>
+            <span>{{footer.tel}}</span>
           </div>
           <div class="col-4">
-            <label>网址:</label>
-            <span>www.sianmed.com</span>
+            <label>传真:</label>
+            <span>{{footer.fex}}</span>
           </div>
           <div class="col-4">
             <label>邮编:</label>
-            <span>430207</span>
+            <span>{{footer.postcode}}</span>
           </div>
 
         </div>
         <div class="row">
           <div class="col-4">
-            <label>传真:</label>
-            <span>(027)81785903</span>
+            <label>邮箱:</label>
+            <span>{{footer.site_admin_email}}</span>
           </div>
 
           <div class="col-8">
             <label>地址:</label>
-            <span>湖北省武汉市东湖高新区高新大道818号医疗器械园B9栋D区3楼</span>
+            <span>{{footer.address}}</span>
           </div>
         </div>
 

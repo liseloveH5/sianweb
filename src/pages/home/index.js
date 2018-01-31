@@ -24,6 +24,7 @@ const index = {
     ...mapState({
       // 传字符串参数 'count' 等同于 `state => state.count`
       header: 'header',
+      footer: 'footer',
       // enterpriseCatalog:state => state.header[1].son,
       // productCatalog:state => state.header[2].son,
       // newsCatalog:state => state.header[4].son,
@@ -76,14 +77,6 @@ const index = {
       this.$http.get('/Ad/slide', compObj).then(function (res) {
         _this.compInfo.text=res.info.remark
         _this.compInfo.list=res.list
-      })
-        .catch(function (error) {
-          util.reqFail(error)
-        });
-      // 获取底部公共信息
-      this.$http.get('/System/seo').then(function (res) {
-        _this.webInfo= res;
-        console.log(333, res)
       })
         .catch(function (error) {
           util.reqFail(error)
