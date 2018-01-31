@@ -49,8 +49,7 @@ const index = {
       // 发送请求
       var obj = {
         params: {
-          // id: this.$route.params.id,
-          id: 17,
+          id: this.$route.params.id,
           key: '',
           page: _this.currentPage,
           size: _this.pageSize,
