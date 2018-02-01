@@ -7,7 +7,7 @@ const index = {
   data() {
     return {
       totalRow:null,
-      pageSize:1,
+      pageSize:7,
       list:[],
       currentPage: 1,
       navList:[],
