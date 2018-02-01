@@ -78,6 +78,11 @@ for (let plugin in components) {
   Vue.component(currentPlugin.name, currentPlugin)
 }
 
+// 引入多色字体图标
+// require('@/assets/iconfont/iconfont.js');
+
+import iconfont from '@/assets/iconfont/iconfont.js';
+
 
 Vue.config.productionTip = false
 

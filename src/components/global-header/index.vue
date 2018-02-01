@@ -74,11 +74,18 @@
         </b-navbar-nav>
       </b-collapse>
     </div>
-
-    <b-button class="btn-lang" variant="outline-secondary" size='sm' @click="chooseLang">
-      <span v-if="lang == 1">English</span>
-      <span v-else>中文</span>
-    </b-button>
+    <div class="btn-lang"  @click="chooseLang">
+      <template v-if="lang == 1">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-meiguo"></use>
+        </svg>
+      </template>
+      <template v-else>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-zhongguo"></use>
+        </svg>
+      </template>
+    </div>
 
   </b-navbar>
 </template>
