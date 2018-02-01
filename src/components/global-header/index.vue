@@ -77,12 +77,12 @@
     <div class="btn-lang"  @click="chooseLang">
       <template v-if="lang == 1">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-meiguo"></use>
+          <use xlink:href="#icon-zhongguo"></use>
         </svg>
       </template>
       <template v-else>
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-zhongguo"></use>
+          <use xlink:href="#icon-meiguo"></use>
         </svg>
       </template>
     </div>
