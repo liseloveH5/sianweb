@@ -25,6 +25,7 @@ const index = {
       // 传字符串参数 'count' 等同于 `state => state.count`
       header: 'header',
       footer: 'footer',
+      lang: 'lang'
       // enterpriseCatalog:state => state.header[1].son,
       // productCatalog:state => state.header[2].son,
       // newsCatalog:state => state.header[4].son,

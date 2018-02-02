@@ -175,29 +175,29 @@
       <div class="row">
         <div class="col-8">
           <span class="col-4">
-            <template v-if="lang">电话：</template>
+            <template v-if="lang==1">电话：</template>
             <template v-else>tel:</template>
             {{footer.tel}}
           </span>
           <span class="col-4">
-            <template v-if="lang">传真：</template>
+            <template v-if="lang==1">传真：</template>
             <template v-else>fex:</template>
             {{footer.fex}}
           </span>
           <span class="col-4">
-            <template v-if="lang">邮编：</template>
+            <template v-if="lang==1">邮编：</template>
             <template v-else>post:</template>
             {{footer.postcode}}
           </span>
         </div>
         <div class="col-4">
-          <template v-if="lang">邮箱:</template>
+          <template v-if="lang==1">邮箱:</template>
           <template v-else>e-mail</template>
           {{footer.site_admin_email}}
         </div>
       </div>
       <p class="text-center co-addr">
-        <template v-if="lang">地址：</template>
+        <template v-if="lang==1">地址：</template>
         <template v-else>address:</template>
         {{footer.address}}
       </p>
