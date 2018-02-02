@@ -26,7 +26,10 @@
                 <h3>{{item.content}}</h3>
                 <h2>{{item.description}}</h2>
                 <p><!--Provide Technology and Services For Hunman Health--></p>
-                <b-button variant="secondary" :to="item.url">申请入口</b-button>
+                <b-button variant="secondary" :to="item.url">
+                  <template v-if="lang==1">申请入口</template>
+                  <template v-else>Application entrance</template>
+                </b-button>
               </div>
             </b-carousel-slide>
 
@@ -39,7 +42,10 @@
       <!--part2:关于思安-->
       <div class="pannel about-me" style="background: #fff;">
         <div class="container">
-          <div class="pannel-title"><p>关于思安</p></div>
+          <div class="pannel-title">
+            <p v-if="lang==1">关于思安</p>
+            <p v-else>About SIAN</p>
+          </div>
           <div class="about-me-desc">
             <p>{{compInfo.text}}</p>
           </div>
@@ -168,13 +174,33 @@
       <p class="text-center co-name">{{footer.company}}</p>
       <div class="row">
         <div class="col-8">
-          <span class="col-4">电话：{{footer.tel}}</span>
-          <span class="col-4">传真：{{footer.fex}}</span>
-          <span class="col-4">邮编：{{footer.postcode}}</span>
+          <span class="col-4">
+            <template v-if="lang">电话：</template>
+            <template v-else>tel:</template>
+            {{footer.tel}}
+          </span>
+          <span class="col-4">
+            <template v-if="lang">传真：</template>
+            <template v-else>fex:</template>
+            {{footer.fex}}
+          </span>
+          <span class="col-4">
+            <template v-if="lang">邮编：</template>
+            <template v-else>post:</template>
+            {{footer.postcode}}
+          </span>
         </div>
-        <div class="col-4">邮箱：{{footer.site_admin_email}}</div>
+        <div class="col-4">
+          <template v-if="lang">邮箱:</template>
+          <template v-else>e-mail</template>
+          {{footer.site_admin_email}}
+        </div>
       </div>
-      <p class="text-center co-addr">地址：{{footer.address}}</p>
+      <p class="text-center co-addr">
+        <template v-if="lang">地址：</template>
+        <template v-else>address:</template>
+        {{footer.address}}
+      </p>
     </div>
 
     <global-footer ></global-footer>
