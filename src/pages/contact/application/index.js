@@ -124,7 +124,12 @@ const index = {
       // 表单验证
       if (!this.organForm.name || !this.organForm.contactName || !this.organForm.contactPhone) {
         this.count=3;
-        this.info='带*的字段不能为空';
+        if(this.lang==1){
+          this.info='带*的字段不能为空';
+        }else{
+          this.info='The field with * can not be empty';
+        }
+
         return;
       }
       let r1 = /^1[3|4|5|7|8][0-9]{9}$/;
@@ -132,7 +137,11 @@ const index = {
       if (!r1.test(this.organForm.contactPhone) && !r2.test(this.organForm.contactPhone)) {
         this.count=3;
         this.tip='warning';
-        this.info='请输入正确的手机号码';
+        if(this.lang==1){
+          this.info='请输入正确的手机号码';
+        }else{
+          this.info='Please enter the correct phone number';
+        }
         return;
       }
       let _this = this;
@@ -146,7 +155,11 @@ const index = {
 
       this.$http.post('/Form/submit', obj).then(function (response) {
         _this.count=3;
-        _this.info='提交成功！';
+        if(this.lang==1){
+          _this.info='提交成功！';
+        }else{
+          _this.info='success!';
+        }
         _this.tip='success'
       })
         .catch(function (error) {
@@ -164,14 +177,22 @@ const index = {
       // 表单验证
       if (!this.personForm.name || !this.personForm.phone || !this.personForm.location) {
         this.count=3;
-        this.info='带*的字段不能为空';
+        if(this.lang==1){
+          this.info='带*的字段不能为空';
+        }else{
+          this.info='The field with * can not be empty';
+        }
       }
       let r1 = /^1[3|4|5|7|8][0-9]{9}$/;
       let r2=/^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
       if (!r1.test(this.personForm.phone) && !r2.test(this.personForm.phone)) {
         this.count=3;
         this.tip='warning';
-        this.info='请输入正确的手机号码';
+        if(this.lang==1){
+          this.info='请输入正确的手机号码';
+        }else{
+          this.info='Please enter the correct phone number';
+        }
       }
 
       let _this = this;
@@ -185,7 +206,11 @@ const index = {
 
       this.$http.post('/Form/submit', obj).then(function (response) {
         _this.count=3;
-        _this.info='提交成功！';
+        if(this.lang==1){
+          _this.info='提交成功！';
+        }else{
+          _this.info='success!';
+        }
         _this.tip='success'
       })
         .catch(function (error) {
