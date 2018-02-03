@@ -82,7 +82,7 @@ const index = {
           contactName:'',
           contactPhone:'',
           selected: '1',
-          options: []
+          options: this.organForm.options
         };
       this.organForm = organObj;
       var personalObj={
@@ -90,7 +90,7 @@ const index = {
         phone:'',
         location:'',
         selected: '1',
-        options: []
+        options: this.personForm.options
       }
       this.personForm = personalObj;
     },
