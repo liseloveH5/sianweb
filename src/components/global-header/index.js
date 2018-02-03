@@ -35,12 +35,15 @@ const index = {
       if(this.lang == 1){
         this.$store.dispatch('setLang',2);
         util.setCookie('lang', 2)
+        console.log(222, axios.defaults.headers.common['WWW-Authorization'])
         axios.defaults.headers.common['WWW-Authorization'] = 2;
       } else {
         this.$store.dispatch('setLang',1);
         util.setCookie('lang', 1)
+        console.log(11, axios.defaults.headers.common['WWW-Authorization'])
         axios.defaults.headers.common['WWW-Authorization'] = 1;
       }
+      location.reload();
     }
 
   },

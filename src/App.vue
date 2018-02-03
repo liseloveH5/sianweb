@@ -24,6 +24,7 @@ export default {
       }else{
         _this.$store.dispatch('setLang',lang);
       }
+      axios.defaults.headers.common['WWW-Authorization'] = lang || 1;
       // 初始化获取菜单
       this.$http.post('/System/nav').then(function (data) {
         _this.$store.dispatch('setHeader',data);

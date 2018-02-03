@@ -4,8 +4,7 @@ import Constant from './Constant';
 // 工具类 继承ajax-axio
 export default class Util extends Constant{
 
-
-  //获取cookie、
+//获取cookie
    getCookie(name) {
     var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
     if (arr = document.cookie.match(reg))

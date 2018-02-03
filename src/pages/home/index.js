@@ -25,6 +25,7 @@ const index = {
       // 传字符串参数 'count' 等同于 `state => state.count`
       header: 'header',
       footer: 'footer',
+      lang: 'lang',
       // enterpriseCatalog:state => state.header[1].son,
       // productCatalog:state => state.header[2].son,
       // newsCatalog:state => state.header[4].son,
@@ -82,19 +83,12 @@ const index = {
           util.reqFail(error)
         });
       // 获取友情链接
-      this.$http.get('/System/friend').then(function (res) {
+     /* this.$http.get('/System/friend').then(function (res) {
         _this.dateFlink = res;
       })
         .catch(function (error) {
           util.reqFail(error)
-        });
-      // 获取联系方式
-      this.$http.get('/System/seo').then(function (res) {
-        _this.webInfo = res;
-      })
-        .catch(function (error) {
-          util.reqFail(error)
-        });
+        });*/
 
     },
 
