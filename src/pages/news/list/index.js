@@ -11,7 +11,7 @@ const index = {
       list:[],
       currentPage: 1,
       navList:[],
-      picUrl:[],
+      picUrl:'',
       navId:''
     }
   },

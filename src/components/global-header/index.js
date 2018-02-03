@@ -42,7 +42,9 @@ const index = {
         axios.defaults.headers.common['WWW-Authorization'] = 1;
       }
       // location.reload();
-      this.$router.push('/')
+      // this.$router.push('/')
+      location.href = '/'
+
 
     }
 
