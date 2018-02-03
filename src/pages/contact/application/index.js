@@ -28,11 +28,17 @@ const index = {
       applyTitle:[
         {
           institution:'机构申请',
-          person:'个人申请'
+          person:'个人申请',
+          phName:'请输入名称',
+          phPhoneNumber:'请输入联系人电话',
+          phLocation:'请输入申请人所在地区',
         },
         {
           institution:'Institution Application',
-          person:'Personal Application'
+          person:'Personal Application',
+          phName:'Please Enter the Name',
+          phPhoneNumber:'Please Enter the Phone Number',
+          phLocation:'Please Enter the Address',
         }
       ]
     }

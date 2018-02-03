@@ -33,7 +33,7 @@
                                     type="text"
                                     v-model="organForm.name"
                                     required
-                                    placeholder="请输入机构名称">
+                                    :placeholder="titleName.phName">
                       </b-form-input>
                     </b-col>
                   </b-form-row>
@@ -48,7 +48,7 @@
                                     type="text"
                                     v-model="organForm.contactName"
                                     required
-                                    placeholder="请输入联系人姓名">
+                                    :placeholder="titleName.phName">
                       </b-form-input>
                     </b-col>
                   </b-form-row>
@@ -63,7 +63,7 @@
                                     type="tel"
                                     v-model="organForm.contactPhone"
                                     required
-                                    placeholder="请输入联系人电话">
+                                    :placeholder="titleName.phPhoneNumber">
                       </b-form-input>
                     </b-col>
                   </b-form-row>
@@ -103,7 +103,7 @@
                                     type="text"
                                     v-model="personForm.name"
                                     required
-                                    placeholder="请输入申请人姓名">
+                                    :placeholder="titleName.phName">
                       </b-form-input>
                     </b-col>
                   </b-form-row>
@@ -118,7 +118,7 @@
                                     type="tel"
                                     v-model="personForm.phone"
                                     required
-                                    placeholder="请输入申请人电话">
+                                    :placeholder="titleName.phPhoneNumber">
                       </b-form-input>
                     </b-col>
                   </b-form-row>
@@ -133,7 +133,7 @@
                                     type="text"
                                     v-model="personForm.location"
                                     required
-                                    placeholder="请输入申请人所在区域">
+                                    :placeholder="titleName.phLocation">
                       </b-form-input>
                     </b-col>
                   </b-form-row>
