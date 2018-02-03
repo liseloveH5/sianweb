@@ -11,7 +11,6 @@ const index = {
         name: '',
         contactName:'',
         contactPhone:'',
-        applyProject:'',
         selected: '1',
         options: []
       },
@@ -77,6 +76,24 @@ const index = {
    },*/
 
   methods: {
+    init(){
+      var organObj={
+          name: '',
+          contactName:'',
+          contactPhone:'',
+          selected: '1',
+          options: []
+        };
+      this.organForm = organObj;
+      var personalObj={
+        name: '',
+        phone:'',
+        location:'',
+        selected: '1',
+        options: []
+      }
+      this.personForm = personalObj;
+    },
     getNav(){
       var _this= this
       // 发送请求
@@ -155,12 +172,14 @@ const index = {
 
       this.$http.post('/Form/submit', obj).then(function (response) {
         _this.count=3;
-        if(this.lang==1){
+        if(_this.lang==1){
           _this.info='提交成功！';
         }else{
           _this.info='success!';
         }
-        _this.tip='success'
+        _this.tip='success';
+        _this.init()
+
       })
         .catch(function (error) {
           util.reqFail(error)
@@ -206,12 +225,13 @@ const index = {
 
       this.$http.post('/Form/submit', obj).then(function (response) {
         _this.count=3;
-        if(this.lang==1){
+        if(_this.lang==1){
           _this.info='提交成功！';
         }else{
           _this.info='success!';
         }
         _this.tip='success'
+        _this.init()
       })
         .catch(function (error) {
           util.reqFail(error)
