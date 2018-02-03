@@ -1,3 +1,4 @@
+import { mapState } from 'vuex'
 const index = {
   name: 'science-application',
 
@@ -27,6 +28,10 @@ const index = {
     }
   },
 
+  computed: mapState({
+    // 传字符串参数 'count' 等同于 `state => state.count`
+    lang: 'lang',
+  }),
 
   // 挂载之后 相当于原来的ready
   mounted: function () {
