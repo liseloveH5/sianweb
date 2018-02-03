@@ -20,7 +20,7 @@
 
           <b-card no-body>
             <b-tabs card>
-              <b-tab title="机构申请" active>
+              <b-tab :title="titleName.institution" active>
                 <b-form @submit="onOrganSubmit" class="message-form">
 
                   <b-form-row>
@@ -90,7 +90,7 @@
               </b-tab>
 
 
-              <b-tab title="个人申请">
+              <b-tab :title="titleName.person">
                 <b-form @submit="onPersonSubmit" class="message-form">
 
                   <b-form-row>

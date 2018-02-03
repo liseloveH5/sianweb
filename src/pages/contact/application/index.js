@@ -24,14 +24,32 @@ const index = {
         options: []
       },
       navList:[],
-      picUrl:''
+      picUrl:'',
+      applyTitle:[
+        {
+          institution:'机构申请',
+          person:'个人申请'
+        },
+        {
+          institution:'Institution Application',
+          person:'Personal Application'
+        }
+      ]
     }
   },
 
-  computed: mapState({
-    // 传字符串参数 'count' 等同于 `state => state.count`
-    lang: 'lang',
-  }),
+  computed: {
+    ...mapState({
+      lang: 'lang',
+    }),
+    titleName: function () {
+      if (this.lang==1){
+        return this.applyTitle[0]
+      }else{
+        return this.applyTitle[1]
+      }
+    },
+  },
 
   // 挂载之后 相当于原来的ready
   mounted: function () {
@@ -42,9 +60,14 @@ const index = {
     })
   },
 
-  /* watch: {
-     // 如果路由有变化，会再次执行该方法
-     '$route': 'routerChange'
+   /*watch: {
+     lang(val){
+       if(val==1){
+         this.applyTitle.institution
+       }
+
+     }
+
    },*/
 
   methods: {
