@@ -28,7 +28,7 @@
                 <p><!--Provide Technology and Services For Hunman Health--></p>
                 <b-button variant="secondary" :to="item.url">
                   <template v-if="lang==1">申请入口</template>
-                  <template v-else>Application entrance</template>
+                  <template v-else>Application Entrance</template>
                 </b-button>
               </div>
             </b-carousel-slide>
@@ -176,29 +176,29 @@
         <div class="col-8">
           <span class="col-4">
             <template v-if="lang==1">电话：</template>
-            <template v-else>tel:</template>
+            <template v-else>Tel:</template>
             {{footer.tel}}
           </span>
           <span class="col-4">
             <template v-if="lang==1">传真：</template>
-            <template v-else>fex:</template>
+            <template v-else>Fex:</template>
             {{footer.fex}}
           </span>
           <span class="col-4">
             <template v-if="lang==1">邮编：</template>
-            <template v-else>post:</template>
+            <template v-else>Post:</template>
             {{footer.postcode}}
           </span>
         </div>
         <div class="col-4">
           <template v-if="lang==1">邮箱:</template>
-          <template v-else>e-mail</template>
+          <template v-else>E-mail</template>
           {{footer.site_admin_email}}
         </div>
       </div>
       <p class="text-center co-addr">
         <template v-if="lang==1">地址：</template>
-        <template v-else>address:</template>
+        <template v-else>Address:</template>
         {{footer.address}}
       </p>
     </div>
