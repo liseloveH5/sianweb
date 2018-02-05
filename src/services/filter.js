@@ -89,6 +89,9 @@ export function pageType(value) {
         return '/common/' + value.split('/')[1];
       case '3':
         return '/contact/application/' + value.split('/')[1];
+      case '4':
+        return '/contact/message/' + value.split('/')[1];
+
     }
   } else {
     return '/'

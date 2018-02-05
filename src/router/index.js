@@ -24,6 +24,10 @@ export default new Router({
       path: '/contact/application/:id',
       component: () => import(/* webpackChunkName: "contact" */ '@/pages/contact/application/index.vue')
     },
+    {
+      path: '/contact/message/:id',
+      component: () => import(/* webpackChunkName: "contact" */ '@/pages/contact/message/index.vue')
+    },
     //公共单页
     {
       path: '/common/:id',
