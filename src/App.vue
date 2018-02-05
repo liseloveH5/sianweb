@@ -13,8 +13,17 @@ export default {
       this.init();
     })
   },
+
+  created(){
+    var isPc = util.isPC();
+    if(!isPc){
+      location.href = 'http://wwww.sinanmed.com/mobile';
+    }
+  },
+
   methods: {
     init(){
+
       let _this = this;
       // 初始化cookies
       var lang = util.getCookie('lang');
@@ -29,13 +38,13 @@ export default {
       // test 多语言应用
       let language='zh-cn';
       let instance = axios.create();
-      instance.defaults.baseURL = '/services';
-      instance.get('/lang/'+ language +'.json').then(function(res){
-        if (Object.keys(res.data).length === 0) {
+      instance.defaults.baseURL = '/';
+      instance.get('static/lang/'+ language +'.json').then(function(res){
+       /* if (Object.keys(res.data).length === 0) {
           console.log('Language Package Error!!')
         } else {
           Vue.locale(lang,res.data)
-        }
+        }*/
       }).then(function(err){
         console.log('Server Connect Error!!');
       })
@@ -54,6 +63,11 @@ export default {
         .catch(function (error) {
           util.reqFail(error)
         });
+
+
+
+
+
     }
   }
 
