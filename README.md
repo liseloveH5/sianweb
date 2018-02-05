@@ -31,11 +31,10 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 ## 页面路由
-* 首页 -> home  雨晴
+* 首页 -> home  
 
-* 关于思安
-** 公司简介 -> about-home
-** 公司团队 -> about-team
+
+** 公司简介 -> common
 
 * 产品中心
 

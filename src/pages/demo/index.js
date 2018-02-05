@@ -20,6 +20,15 @@ const index = {
    },*/
 
   methods: {
+    clickme:function(){
+      let options = {
+        type : 'error', // ['success', 'info', 'error']
+        icon : 'error_outline',
+        position: "top-center",
+        duration : 2000
+      };
+      this.$toasted.show('hello billo', options)
+    }
 
   }
 

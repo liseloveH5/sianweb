@@ -25,6 +25,21 @@ export default {
         _this.$store.dispatch('setLang',lang);
       }
       axios.defaults.headers.common['WWW-Authorization'] = lang || 1;
+
+      // test 多语言应用
+      let language='zh-cn';
+      let instance = axios.create();
+      instance.defaults.baseURL = '/services';
+      instance.get('/lang/'+ language +'.json').then(function(res){
+        if (Object.keys(res.data).length === 0) {
+          console.log('Language Package Error!!')
+        } else {
+          Vue.locale(lang,res.data)
+        }
+      }).then(function(err){
+        console.log('Server Connect Error!!');
+      })
+
       // 初始化获取菜单
       this.$http.post('/System/nav').then(function (data) {
         _this.$store.dispatch('setHeader',data);

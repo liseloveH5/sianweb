@@ -23,6 +23,15 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 
+// 引入toast弹窗
+import Toasted from 'vue-toasted';
+Vue.use(Toasted)
+
+// 多语言选择
+import VueI18n from 'vue-i18n';
+Vue.use(VueI18n)
+
+
 // 将Promise抛出为全局对象  解决ie10无法打开问题
 window.Promise = Promise
 
