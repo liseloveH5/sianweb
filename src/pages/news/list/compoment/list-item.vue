@@ -9,13 +9,17 @@
         {{desc}}
       </p>
       <div>
-        <b-btn class="float-right" variant="primary" :to="{path:`/news/detail/${id}/${navid}`}"> 查看详情</b-btn>
+        <b-btn class="float-right" variant="primary" :to="{path:`/news/detail/${id}/${navid}`}">
+          <template v-if="lang == 1">查看详情</template>
+          <template v-else>more</template>
+        </b-btn>
       </div>
     </b-media>
   </b-card>
 </template>
 
 <script>
+  import { mapState } from 'vuex'
   export default {
     name: 'list-items',
     data() {
@@ -26,7 +30,7 @@
     props:{
       image:String,
       title:String,
-      date:String,
+      date:Number,
       desc:String,
       id:String,
       navid:String
@@ -37,6 +41,10 @@
         // 保证 this.$el 已经插入文档
       })
     },
+    computed: mapState({
+      // 传字符串参数 'count' 等同于 `state => state.count`
+      lang: 'lang'
+    }),
   };
 </script>
 

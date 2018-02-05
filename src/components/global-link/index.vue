@@ -15,27 +15,32 @@
       <div class="comp-info">
         <div class="row">
           <div class="col-4">
-            <label>电话:</label>
+            <label v-if="lang==1">电话:</label>
+            <label v-else>Tel:</label>
             <span>{{footer.tel}}</span>
           </div>
           <div class="col-4">
-            <label>传真:</label>
+            <label v-if="lang==1">传真:</label>
+            <label v-else>Fex:</label>
             <span>{{footer.fex}}</span>
           </div>
           <div class="col-4">
-            <label>邮编:</label>
+            <label v-if="lang==1">邮编:</label>
+            <label v-else>Post:</label>
             <span>{{footer.postcode}}</span>
           </div>
 
         </div>
         <div class="row">
           <div class="col-4">
-            <label>邮箱:</label>
+            <label v-if="lang==1">邮箱:</label>
+            <label v-else>E-mail:</label>
             <span>{{footer.site_admin_email}}</span>
           </div>
 
           <div class="col-8">
-            <label>地址:</label>
+            <label v-if="lang==1">地址:</label>
+            <label v-else>Address:</label>
             <span>{{footer.address}}</span>
           </div>
         </div>

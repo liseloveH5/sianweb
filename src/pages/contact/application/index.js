@@ -1,3 +1,4 @@
+import { mapState } from 'vuex'
 const index = {
   name: 'science-application',
 
@@ -10,7 +11,6 @@ const index = {
         name: '',
         contactName:'',
         contactPhone:'',
-        applyProject:'',
         selected: '1',
         options: []
       },
@@ -23,10 +23,38 @@ const index = {
         options: []
       },
       navList:[],
-      picUrl:''
+      picUrl:'',
+      applyTitle:[
+        {
+          institution:'机构申请',
+          person:'个人申请',
+          phName:'请输入名称',
+          phPhoneNumber:'请输入联系人电话',
+          phLocation:'请输入申请人所在地区',
+        },
+        {
+          institution:'Institution Application',
+          person:'Personal Application',
+          phName:'Please Enter the Name',
+          phPhoneNumber:'Please Enter the Phone Number',
+          phLocation:'Please Enter the Address',
+        }
+      ]
     }
   },
 
+  computed: {
+    ...mapState({
+      lang: 'lang',
+    }),
+    titleName: function () {
+      if (this.lang==1){
+        return this.applyTitle[0]
+      }else{
+        return this.applyTitle[1]
+      }
+    },
+  },
 
   // 挂载之后 相当于原来的ready
   mounted: function () {
@@ -37,12 +65,35 @@ const index = {
     })
   },
 
-  /* watch: {
-     // 如果路由有变化，会再次执行该方法
-     '$route': 'routerChange'
+   /*watch: {
+     lang(val){
+       if(val==1){
+         this.applyTitle.institution
+       }
+
+     }
+
    },*/
 
   methods: {
+    init(){
+      var organObj={
+          name: '',
+          contactName:'',
+          contactPhone:'',
+          selected: '1',
+          options: this.organForm.options
+        };
+      this.organForm = organObj;
+      var personalObj={
+        name: '',
+        phone:'',
+        location:'',
+        selected: '1',
+        options: this.personForm.options
+      }
+      this.personForm = personalObj;
+    },
     getNav(){
       var _this= this
       // 发送请求
@@ -90,7 +141,12 @@ const index = {
       // 表单验证
       if (!this.organForm.name || !this.organForm.contactName || !this.organForm.contactPhone) {
         this.count=3;
-        this.info='带*的字段不能为空';
+        if(this.lang==1){
+          this.info='带*的字段不能为空';
+        }else{
+          this.info='The field with * can not be empty';
+        }
+
         return;
       }
       let r1 = /^1[3|4|5|7|8][0-9]{9}$/;
@@ -98,7 +154,11 @@ const index = {
       if (!r1.test(this.organForm.contactPhone) && !r2.test(this.organForm.contactPhone)) {
         this.count=3;
         this.tip='warning';
-        this.info='请输入正确的手机号码';
+        if(this.lang==1){
+          this.info='请输入正确的手机号码';
+        }else{
+          this.info='Please enter the correct phone number';
+        }
         return;
       }
       let _this = this;
@@ -112,8 +172,14 @@ const index = {
 
       this.$http.post('/Form/submit', obj).then(function (response) {
         _this.count=3;
-        _this.info='提交成功！';
-        _this.tip='success'
+        if(_this.lang==1){
+          _this.info='提交成功！';
+        }else{
+          _this.info='success!';
+        }
+        _this.tip='success';
+        _this.init()
+
       })
         .catch(function (error) {
           util.reqFail(error)
@@ -130,14 +196,22 @@ const index = {
       // 表单验证
       if (!this.personForm.name || !this.personForm.phone || !this.personForm.location) {
         this.count=3;
-        this.info='带*的字段不能为空';
+        if(this.lang==1){
+          this.info='带*的字段不能为空';
+        }else{
+          this.info='The field with * can not be empty';
+        }
       }
       let r1 = /^1[3|4|5|7|8][0-9]{9}$/;
       let r2=/^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
       if (!r1.test(this.personForm.phone) && !r2.test(this.personForm.phone)) {
         this.count=3;
         this.tip='warning';
-        this.info='请输入正确的手机号码';
+        if(this.lang==1){
+          this.info='请输入正确的手机号码';
+        }else{
+          this.info='Please enter the correct phone number';
+        }
       }
 
       let _this = this;
@@ -151,8 +225,13 @@ const index = {
 
       this.$http.post('/Form/submit', obj).then(function (response) {
         _this.count=3;
-        _this.info='提交成功！';
+        if(_this.lang==1){
+          _this.info='提交成功！';
+        }else{
+          _this.info='success!';
+        }
         _this.tip='success'
+        _this.init()
       })
         .catch(function (error) {
           util.reqFail(error)

@@ -1,6 +1,10 @@
-
+import { mapState } from 'vuex'
 const index = {
   name: 'news-detail',
+  computed: mapState({
+    // 传字符串参数 'count' 等同于 `state => state.count`
+    lang: 'lang'
+  }),
 
   data() {
     return {

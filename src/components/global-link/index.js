@@ -18,6 +18,7 @@ const index = {
   computed: mapState({
     // 传字符串参数 'count' 等同于 `state => state.count`
     footer: 'footer',
+    lang: 'lang'
   }),
 
   /* watch: {

@@ -41,6 +41,11 @@ const index = {
         util.setCookie('lang', 1)
         axios.defaults.headers.common['WWW-Authorization'] = 1;
       }
+      // location.reload();
+      // this.$router.push('/')
+      location.href = '/'
+
+
     }
 
   },

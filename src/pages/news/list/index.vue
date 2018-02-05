@@ -1,7 +1,7 @@
 <template>
   <div class="common-page news-list">
     <global-header></global-header>
-    <div class="img-wrap"><img src="@/assets/images/main/friends-bg.png"/></div>
+    <div class="img-wrap"><img :src="picUrl"/></div>
     <div class="common-contain container">
       <b-row>
         <b-col cols="3">

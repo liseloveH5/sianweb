@@ -15,8 +15,16 @@
 
           <b-card :title="newsDetail.post_title"
                   class="detail-header">
-            <div class="date">发布日期：{{newsDetail.published_time}}</div>
-            <div class="desc">来源: {{newsDetail.post_source}}</div>
+            <div class="date">
+              <template v-if="lang==1">发布日期：</template>
+              <template v-else>date:</template>
+              {{newsDetail.published_time}}
+            </div>
+            <div class="desc">
+              <template v-if="lang==1">来源: </template>
+              <template v-else>resource: </template>
+              {{newsDetail.post_source}}
+            </div>
             <div class="detail-container" v-html="content">
 
             <!--  <img src="http://oyqbjwu6v.bkt.clouddn.com/blog/180116/h4kA8G7G0D.png" alt="">
@@ -27,12 +35,14 @@
           <div class="detail-footer">
             <div class="row">
               <div class="col-5 text-left">
-                <span>上一篇：</span>
+                <span v-if="lang==1">上一篇：</span>
+                <span v-else>prev:</span>
                 <b-link @click="getDetailData(around.prev.id)" :to="`/news/detail/${around.prev.id}/${navid}`">{{around.prev.post_title}}</b-link>
               </div>
               <div class="offset-2 col-5 text-right ">
                 <b-link @click="getDetailData(around.next.id)" :to="`/news/detail/${around.next.id}/${navid}`">{{around.next.post_title}}</b-link>
-                <span >：下一篇</span>
+                <span v-if="lang==1">：下一篇</span>
+                <span v-else>:next</span>
               </div>
             </div>
           </div>
