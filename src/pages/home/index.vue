@@ -26,10 +26,10 @@
                 <h3>{{item.content}}</h3>
                 <h2>{{item.description}}</h2>
                 <p><!--Provide Technology and Services For Hunman Health--></p>
-                <b-button variant="secondary" :to="item.url">
+               <!-- <b-button variant="secondary" :to="item.url">
                   <template v-if="lang==1">申请入口</template>
                   <template v-else>Application Entrance</template>
-                </b-button>
+                </b-button>-->
               </div>
             </b-carousel-slide>
 
@@ -58,8 +58,7 @@
                     img-top
                     tag="article"
                     style="max-width: 20rem;"
-
-                    :class="id == index ? 'mb-2 col active' : 'mb-2 col '"
+                    class="mb-2 col"
                     @click="handleAboutClick(item,index)">
               <div class="card-letter"><h3 class="img text-center">{{item.alias | firstLetter}}</h3></div>
               <p class="text-center">{{item.description}}</p>

@@ -1,10 +1,11 @@
 <template>
   <b-navbar toggleable="md" type="dark" variant="primary" class="global-header flex-column" sticky >
 
+    <b-navbar-brand  variant="faded" type="light">
+      <img src="@/assets/images/global-header/logo.png" class="logo" alt="思安logo">
+    </b-navbar-brand>
+
     <div class="container">
-      <b-navbar-brand  variant="faded" type="light">
-        <img src="@/assets/images/global-header/logo.png" class="logo" alt="思安logo">
-      </b-navbar-brand>
 
 
       <b-collapse is-nav id="nav_collapse">
@@ -77,13 +78,15 @@
     <div class="btn-lang"  @click="chooseLang">
       <template v-if="lang == 1">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-zhongguo"></use>
+          <use xlink:href="#icon-meiguo"></use>
         </svg>
+        English
       </template>
       <template v-else>
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-meiguo"></use>
+          <use xlink:href="#icon-zhongguo"></use>
         </svg>
+        中文
       </template>
     </div>
 
