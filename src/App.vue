@@ -17,7 +17,7 @@ export default {
   created(){
     var isPc = util.isPC();
     if(!isPc){
-      location.href = 'http://wwww.sinanmed.com/mobile';
+      location.href = 'http://www.sianmed.com/mobile';
     }
   },
 

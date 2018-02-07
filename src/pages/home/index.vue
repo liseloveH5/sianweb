@@ -169,7 +169,7 @@
     </div>
 
     <div class="pannel co-info">
-      <div class="co-qr-code"><img src="@/assets/images/main/qr-code.png"></div>
+      <div class="co-qr-code"><img src="@/assets/images/main/qr-code.jpg"></div>
       <p class="text-center co-name">{{footer.company}}</p>
       <div class="row">
         <div class="col-8">
