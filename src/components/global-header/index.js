@@ -22,6 +22,8 @@ const index = {
   mounted: function () {
     this.$nextTick(function () {
       // 保证 this.$el 已经插入文档
+      let _this = this;
+      setTimeout(_this.bindHoverEvent, 1000)
     })
   },
 
@@ -31,6 +33,23 @@ const index = {
    },*/
 
   methods: {
+    bindHoverEvent() {
+      $('.common-header .nav-item').hover(function(){
+          $('.common-header .navbar-nav .nav-item').removeClass('show')
+          $('.common-header .navbar-nav .dropdown-menu-left').removeClass('show')
+          $(this).find('.dropdown-menu-left').addClass('show')
+          $(this).addClass('show');
+      },function(){
+
+      })
+
+      $('.common-header .navbar-nav .dropdown-menu-left').mouseleave(function(){
+        $('.common-header .navbar-nav .dropdown-menu-left').removeClass('show')
+        $('.common-header .navbar-nav .nav-item').removeClass('show')
+      })
+    },
+
+
     chooseLang() {
       if(this.lang == 1){
         this.$store.dispatch('setLang',2);
@@ -44,9 +63,10 @@ const index = {
       // location.reload();
       // this.$router.push('/')
       location.href = '/'
+    },
 
 
-    }
+
 
   },
 

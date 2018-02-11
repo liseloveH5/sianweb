@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="md" type="dark" variant="primary" class="global-header flex-column" sticky >
+  <b-navbar toggleable="md" type="dark" variant="primary" class="global-header flex-column common-header" sticky >
 
     <b-navbar-brand  variant="faded" type="light">
       <img src="@/assets/images/global-header/logo.png" class="logo" alt="思安logo">
@@ -19,9 +19,9 @@
 
             <!-- 如有有子节点 二级菜单-->
             <template v-if="item.son.length > 0">
-              <b-nav-item-dropdown :text="item.name">
+              <b-nav-item-dropdown :text="item.name"  >
                 <span></span>
-                <b-dropdown-item v-for="son in item.son" :key="son.id" :to="(son.type+ '/' + son.id) | pageType">
+                <b-dropdown-item v-for="son in item.son" :key="son.id" :to="(son.type+ '/' + son.id) | pageType" >
                   {{son.name}}
                 </b-dropdown-item>
               </b-nav-item-dropdown>
