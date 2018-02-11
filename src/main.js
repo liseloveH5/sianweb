@@ -32,6 +32,11 @@ import VueI18n from 'vue-i18n';
 Vue.use(VueI18n)
 
 
+import jquery from 'jquery';
+window.$ = jquery;
+
+
+
 // 将Promise抛出为全局对象  解决ie10无法打开问题
 window.Promise = Promise
 
