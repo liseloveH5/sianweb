@@ -33,6 +33,10 @@ export default new Router({
       path: '/common/:id',
       component: () => import(/* webpackChunkName: "contact" */ '@/pages/common/index.vue')
     },
+    {
+      path: '/error',
+      component: () => import(/* webpackChunkName: "contact" */ '@/pages/error/index.vue')
+    },
     //demo
     {
       path: '/demo',

@@ -14,6 +14,7 @@ export default {
     })
   },
 
+
   created(){
     var isPc = util.isPC();
     if(!isPc){
@@ -23,7 +24,6 @@ export default {
 
   methods: {
     init(){
-
       let _this = this;
       // 初始化cookies
       var lang = util.getCookie('lang');
@@ -34,6 +34,22 @@ export default {
         _this.$store.dispatch('setLang',lang);
       }
       axios.defaults.headers.common['WWW-Authorization'] = lang || 1;
+
+
+      // 获取网页是否正常
+      // 初始化获取底部网站信息
+      this.$http.get('/system/webon').then(function (res) {
+         // res 1为正常  2为关闭
+        if(res == 1){
+          // do nothing
+        } else if(res == 2){
+          _this.$router.replace('/error');
+        }
+      })
+      .catch(function (error) {
+        util.reqFail(error)
+      });
+
 
       // test 多语言应用
       let language='zh-cn';
@@ -60,9 +76,11 @@ export default {
       this.$http.get('/System/seo').then(function (res) {
         _this.$store.dispatch('setFooter',res);
       })
-        .catch(function (error) {
-          util.reqFail(error)
-        });
+      .catch(function (error) {
+        util.reqFail(error)
+      });
+
+
 
 
 
