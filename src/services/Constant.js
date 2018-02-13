@@ -3,7 +3,7 @@ export default class Constant {
     this.SYS_INFO = {
     }
 
-    this.COOKIE_DOMAIN = '.zallgo.com'
+    this.COOKIE_DOMAIN = '.com'
 
   }
 
