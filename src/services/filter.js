@@ -1,7 +1,7 @@
 /*
 * 过滤href
 * 如果是http开头，则保留 eg: http://www.baidu.com -> http://www.baidu.com
-* 如果是协议的，则去掉协议保留后面路由信息 eg:zallgo://cms?path=nav1/home -> /cms?path=nav1/home
+* 如果是协议的，则去掉协议保留后面路由信息 eg://cms?path=nav1/home -> /cms?path=nav1/home
 * */
 export function hrefFormat(value) {
   let link = 'javascript:void(0)'
