@@ -42,12 +42,12 @@
       <!--part2:关于思安-->
       <div class="pannel about-me" style="background: #fff;">
         <div class="container">
-          <div class="pannel-title">
-            <p v-if="lang==1">关于思安</p>
-            <p v-else>About SIAN</p>
-          </div>
+          <!--<div class="pannel-title">-->
+            <!--<p v-if="lang==1">关于思安</p>-->
+            <!--<p v-else>About SIAN</p>-->
+          <!--</div>-->
           <div class="about-me-desc">
-            <p>{{compInfo.text}}</p>
+            <p v-html="compInfo.text"></p>
           </div>
           <div class="about-me-list row">
             <b-card v-for="(item, index) in compInfo.list"

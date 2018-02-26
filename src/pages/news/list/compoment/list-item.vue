@@ -1,19 +1,22 @@
 <template>
   <b-card class="news-list-item">
     <b-media>
-      <b-img slot="aside" :src="image" width="200" height="160" alt="placeholder" />
+      <!--<b-img slot="aside" :src="image" width="200" height="160" alt="placeholder" />-->
 
-      <h5 class="mt-0 title">{{title}}</h5>
-      <span class="data-time">{{date | dateFormat}}</span>
-      <p class="desc">
-        {{desc}}
-      </p>
-      <div>
-        <b-btn class="float-right" variant="primary" :to="{path:`/news/detail/${id}/${navid}`}">
-          <template v-if="lang == 1">查看详情</template>
-          <template v-else>more</template>
-        </b-btn>
-      </div>
+      <router-link v-bind:to="{path:`/news/detail/${id}/${navid}`}">
+        <h5 class="mt-0 title">{{title}}</h5>
+      </router-link>
+
+      <!--<span class="data-time">{{date | dateFormat}}</span>-->
+      <!--<p class="desc">-->
+        <!--{{desc}}-->
+      <!--</p>-->
+      <!--<div>-->
+        <!--<b-btn class="float-right" variant="primary" :to="{path:`/news/detail/${id}/${navid}`}">-->
+          <!--<template v-if="lang == 1">查看详情</template>-->
+          <!--<template v-else>more</template>-->
+        <!--</b-btn>-->
+      <!--</div>-->
     </b-media>
   </b-card>
 </template>

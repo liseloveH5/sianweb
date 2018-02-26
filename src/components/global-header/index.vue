@@ -80,13 +80,13 @@
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-meiguo"></use>
         </svg>
-        English
+        &nbsp;EN
       </template>
       <template v-else>
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-zhongguo"></use>
         </svg>
-        中文
+        &nbsp;中文
       </template>
     </div>
 
