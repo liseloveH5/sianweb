@@ -7,7 +7,7 @@
         <h5 class="mt-0 title">{{title}}</h5>
       </router-link>
 
-      <!--<span class="data-time">{{date | dateFormat}}</span>-->
+      <span class="data-time">{{date | dateFormat}}</span>
       <!--<p class="desc">-->
         <!--{{desc}}-->
       <!--</p>-->
@@ -55,12 +55,20 @@
   @import "~@/assets/style/base/_fn";
 
   .news-list-item{
+    line-height: 24px;
     .title{
+      float: left;
+      width: 530px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
       color:@color3;
       margin-bottom:5px;
     }
     .data-time{
+      float: right;
       color:#81899e;
+      font-size:14px;
     }
     .desc{
       font-size:14px;
